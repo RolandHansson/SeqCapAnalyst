@@ -1,0 +1,175 @@
+INTRODUCTION:
+This is a SeqCapAnalyst to process .fastq files, producing standard files as well
+as statistics useful for singling out target genes. 
+Rather than speed, it is optimized for easy moddability.
+
+AUTHOR: 
+Roland Hansson
+
+
+PREREQUISITES: 
+Bash, Python, Java
+
+FastQC
+Fastq Screen
+Bowtie2
+samtools
+BCFtools
+VCFtools
+seqtk
+Mafft
+Stretcher (part of EMBOSS package)
+
+Trimmomatic (included)
+Picard (included)
+vcfutils.pl (included)
+---------------------------
+
+INSTALLATION
+
+Make sure prerequisites (above) are installed. 
+
+put SeqCapAnalyst folder in your bin folder, and change directory to bin folder. 
+
+chmod 755 SeqCapAnalyst/SeqCapAnalyst.sh #Add permissions
+ln -s SeqCapAnalyst/SeqCapAnalyst.sh #Add to callable programs
+bash SeqCapAnalyst/check_dependencies.sh #double-check prerequisites
+
+---------------------------
+
+BASIC RUN
+
+SeqCapAnalyst.sh [target_file] 
+Example: SeqCapAnalyst.sh 512022_S1_L001_R1_001.fastq 
+
+NOTE: SeqCapAnalyst is intended for use on Illumina files, 
+and thus expects two input files ending in "_R1_001.fastq" and "_R2_001.fastq".
+(Only one input file needs to be named; the name of the other will be extrapolated from the first.)
+
+---------------------------
+
+BATCH RUN
+
+SeqCapAnalyst.sh [target_files] 
+Example: SeqCapAnalyst.sh *001.fastq 
+
+NOTE: In batch mode, it is not possible to specify folder name. 
+
+---------------------------
+
+PARTIAL RUN
+
+It is possible to delete a file from an output folder, then run SeqCapAnalyst again. 
+The program will then recreate only the missing file, unless the "skip" option is set to '0'. 
+(The purpose is to make it easier to add and test code for creating new output.) 
+
+---------------------------
+
+OPTIONS: 
+-h Display help message
+-n Manually set number of cores
+-f Specify output folder name. 
+-a Specify adapters (path to file)
+-b Specify bowtie2 stringency settings 
+-s 0 Overwrite existing files in output folder. 
+-d 1 On finishing, delete output files except for statistics. (Used for benchmarking) 
+
+----------------------------
+
+BOWTIE2 STRINGENCY
+
+-b 1 (Default) 
+--local -D 20 -R 3 -N 1 -L 20 -i S,1,0.50
+-b 2
+--local -D 15 -R 2 -N 1 -L 20 -i S,1,0.75
+-b 3
+--local --local -N 1
+-b 4
+--local --very-sensitive-local
+-b 5
+--local --sensitive-local
+
+----------------------------
+
+REFERENCE FILES (included in SeqCapAnalyst folder)
+reference DNA 
+GFF file to reference DNA 
+File with Illumina Adapters
+DNA of possible contaminants:
+ Current load-out:
+ - Homo Sapiens (Human, hg38 version)
+ - Culex quinquefasciatus (Southern House Mosquito)
+ - Taeniopygia guttata (Zebra Finch) 
+ - Illumina Adapters
+
+---------------------------
+ 
+OUTPUT:
+main folder
+[sample_name]_consensus.fasta
+[sample_name]_double_single_end_genome_sorted_rg.bam - bamfile
+[sample_name]_double_single_end_genome_sorted_rg.bam.bai - bamfile index
+
+fastq_stats/
+ - FastQC data
+ - Fastq Screen data
+consensus/
+ - consensus file for every exon
+cap_consensus/ 
+ - Capitalized consensus file for every exon
+
+multifastas/
+scaffolds/
+
+CONSENSUS: 
+
+
+---------------------------
+
+CODE ORGANIZATION 
+
+Code is executed module-by-module in linear fashion. 
+(When adding more modules, add the code downstream of where prerequisites are made.) 
+
+STRUCTURE
+-Functions
+-Variables
+-Creation of intermediate files
+-Fastq trimming
+-Fastq quality check
+-Matching with bowtie2 
+-Conversion to 
+
+GENERAL STRUCTURE OF MODULES
+
+infile=X
+outfile=Y
+Unless $outfile exists:
+ - make sure $infile exists
+ - add settings to LOG
+ - use $infile to make $outfile 
+ - add execution file to LOG
+Report whether module was completed or skipped
+
+---------------------------
+
+CUSTOMIZATION: 
+
+HOW TO CUSTOMIZE CONTAMINANT SEARCH: 
+ - Go to the folder "fastq_screen_fastas", 
+ - Remove the files you want to replace. (Including index files)  
+ - Add fasta files you want to add to the search. (Need to have extension .fasta or .fa to be recognized.) 
+ - Run SeqCapAnalyst. Indexing and modification of the Fastq-Screen config file should be performed automatically. 
+
+--------------------------
+ 
+NOTES: 
+
+CORE UTILIZATION: 
+In absence of the core number option, ( -n [integer] ), SeqCapAnalyst sets a
+default to [nr of cores - 1] with an upper cap of 10. 
+Benchmark tests have shown little improvement when using more than 6 cores
+(6 for smaller fastq files with about 500MB, 10 for bigger files with about 1GB),
+though if reads per exon are made to be more evenly distributed, this will likely
+change. 
+

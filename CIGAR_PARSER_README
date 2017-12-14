@@ -1,0 +1,61 @@
+----------------------
+
+cigar_parser.py README
+
+----------------------
+
+cigar_parser is a python module for taking SAM-format read information, and use it to reconstruct the alignment, ending with a consensus sequence.  
+
+Note: In its simple mode, cigar_parser should be able to take a nearly arbitrarily large SAM input stream. However, as the input increases, and indel sites accumulate, the resulting output grows increasingly unwieldy and hard-to-read. 
+
+----------------------
+
+BASIC USE:
+
+samtools view bamfile.bam HtScaffold0001\:0-100 | cigar_parser.py reference.fasta "HtScaffold0001:0-100" 
+
+alternately:
+
+cigar_parser.py -i input_file.sam reference.fasta "HtScaffold0001:0-100" 
+
+----------------------
+
+COMMANDS
+
+usage: cigar_parser.py [-h] [-i INPUT] [-n NAME] [-s CONSENSUS_FILE]
+                       [-b BLAST_FILE] [-g] [-f] [-c] [-d] [-p] [--cigar]
+                       [--speedy] [--skip] [-o] [-r] [-m]
+                       reference_file reference_name
+
+positional arguments:
+  reference_file        fasta file to extract reference sequence from.
+  reference_name        name of reference sequence.
+
+optional arguments:
+  -h, --help            show help message and exit
+  -i INPUT, --input INPUT
+                        SAM file to extract sequences from.
+  -n NAME, --name NAME  find specific sequence name
+  -s CONSENSUS_FILE, --consensus_file CONSENSUS_FILE
+                        (optional) external consensus file
+  -b BLAST_FILE, --blast_file BLAST_FILE
+                        (optional) external blast file, to help find start/end
+  -g, --gaps            Add gaps every 10 bases
+  -f, --full            Include tangential hits on reference sequence
+  -c, --colour, --color
+                        Colour output in the prompt. (Note: may render output
+                        unusable by other programs.)
+  -d, --debug           Adds debugging messages.
+  -p, --positioning     Adds position info to every base in sequence. Also
+                        turns on colour.
+  --cigar               Adds CIGAR after name.
+  --speedy              Skips the 'difference-from-consensus' part and outputs
+                        stream of fastas, followed by consensus.
+  --skip                Skips the raw output fasta stream.
+  -o, --consensus       Removes consensus sequence part.
+  -r, --reference       Removes reference sequence part.
+  -m, --multifasta      Removes multifasta part
+
+----------------------
+
+----------------------

@@ -1,0 +1,1001 @@
+CoxI	NULL	NULL	NULL	NULL	27.5
+CoxIII	NULL	NULL	NULL	NULL	24.9
+Cytb	NULL	NULL	NULL	NULL	27.1
+HtGene0006	507	NULL	NifU protein, putative OS=Plasmodium chabaudi 	Q4Y163	31.6
+HtGene0007	2871	NULL	Peptidase OS=Plasmodium cynomolgi strain 	K6ULV3	31.4
+HtGene0013	867	NULL	Tetratricopeptide repeat family protein, 	Q8IDR6	30.7
+HtGene0014	2148	NULL	Casein kinase II beta chain OS=Plasmodium 	Q8IDR5	34.5
+HtGene0015	2454	NULL	Myosin-A OS=Plasmodium falciparum (isolate 	Q9UAR6	34.4
+HtGene0017	1716	NULL	Phosphoenolpyruvate carboxykinase (Fragment) 	Q9U750	34.9
+HtGene0018	14325	NULL	AP2 family, putative OS=Plasmodium knowlesi 	B3L8H0	31.0
+HtGene0022	1434	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Z6K1	33.3
+HtGene0028	1896	NULL	Pre-mrna splicing factor, putative (Fragment) 	Q4YBJ2	31.5
+HtGene0029	1602	NULL	Putative ribosomal processing protein 	Q7RH93	29.8
+HtGene0031	2913	NULL	Uncharacterized protein OS=Plasmodium 	Q7RH94	25.7
+HtGene0032	2211	NULL	Pfj1 OS=Plasmodium falciparum PE=3 SV=1	O15811	31.4
+HtGene0033	1290	NULL	NAD(P)-binding protein/reductase OS=Plasmodium 	K6UPW0	31.9
+HtGene0034	3234	NULL	Replication factor a protein OS=Plasmodium 	K6US48	35.1
+HtGene0039	1185	NULL	Uncharacterized protein OS=Plasmodium 	Q7RM76	29.9
+HtGene0051	1890	NULL	UBA/THIF-type NAD/FAD binding protein, 	Q4XZD8	26.4
+HtGene0052	1236	NULL	Aminomethyltransferase, mitochondrial, 	A5K2R0	32.0
+HtGene0063	3186	NULL	Rhoptry protein OS=Plasmodium cynomolgi 	K6UXD2	30.1
+HtGene0064	450	NULL	Nucleoside diphosphate kinase b, putative 	Q8ID43	36.7
+HtGene0065	1770	NULL	Signal recognition particle receptor alpha 	Q4YXZ5	30.3
+HtGene0069	573	NULL	S-phase kinase-associated protein 1A, 	A5K2S5	30.4
+HtGene0070	1941	NULL	U1 small nuclear ribonucleoprotein 70 	K6UKT9	29.5
+HtGene0077	948	NULL	40S ribosomal protein S6, putative OS=Plasmodium 	Q8IDR9	32.9
+HtGene0078	654	NULL	Vacuolar ATP synthase subunit D, putative 	Q8IDS0	34.3
+HtGene0082	630	NULL	60S ribosomal protein L18 OS=Plasmodium 	K6UYJ3	37.3
+HtGene0083	825	NULL	60S ribosomal protein L18a OS=Plasmodium 	K6UE34	34.2
+HtGene0085	624	NULL	Small GTPase rab11b (Fragment) OS=Plasmodium 	K6UVR8	32.5
+HtGene0092	435	NULL	Calmodulin OS=Plasmodium falciparum PE=3 	P24044	33.1
+HtGene0094	1722	NULL	STI1-like protein OS=Plasmodium falciparum 	Q8ILC1	31.9
+HtGene0095	22347	NULL	P-loop containing nucleoside triphospahte 	B3LBE9	30.2
+HtGene0096	1575	NULL	Methionine aminopeptidase OS=Plasmodium 	Q8ILB8	34.8
+HtGene0097	576	NULL	Mitochondrial import inner membrane translocase 	Q8ILB7	40.1
+HtGene0100	1299	NULL	Cytochrome c oxidase assembly protein, 	Q8ILB4	29.6
+HtGene0108	1503	NULL	Cysteine desulfurase, putative OS=Plasmodium 	Q8IBI5	31.4
+HtGene0109	2190	NULL	Modification methylase-like protein, putative 	B3KZQ9	26.4
+HtGene0110	756	NULL	Proteasome subunit alpha type OS=Plasmodium 	B3KZR0	32.4
+HtGene0115	4728	NULL	Integral membrane protein, putative OS=Plasmodium 	B3KZR4	31.0
+HtGene0116	834	NULL	Eukaryotic translation initiation factor 	Q4XMT5	32.6
+HtGene0129	3408	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8I341	29.6
+HtGene0131	1602	NULL	DNA primase, large subunit, putative OS=Plasmodium 	A5K6H8	29.9
+HtGene0132	1308	NULL	Nucleotide binding protein, putative OS=Plasmodium 	B3L3C0	31.9
+HtGene0133	2085	NULL	Actin-like protein, putative OS=Plasmodium 	Q8I345	27.6
+HtGene0140	3030	NULL	Histidyl-tRNA synthetase, putative OS=Plasmodium 	Q7RIB9	32.8
+HtGene0141	2268	NULL	RNA helicase, putative OS=Plasmodium knowlesi 	B3L9W5	27.4
+HtGene0143	2448	NULL	Protein serine/threonine kinase-1 (Fragment) 	Q7R9I8	33.7
+HtGene0148	1707	NULL	Helicase, putative OS=Plasmodium knowlesi 	B3L9V8	38.3
+HtGene0153	1251	NULL	Pyruvate dehydrogenase E1 beta subunit,putative 	B3L9V4	33.4
+HtGene0166	1548	NULL	Vacuolar ATP synthase subunit h, putative 	Q8IEP9	28.4
+HtGene0168	1182	NULL	26s protease regulatory subunit s10b (P44) 	Q7PDR8	33.0
+HtGene0169	1725	NULL	SAM-dependent methyltransferase related 	Q7RLF6	21.7
+HtGene0182	2748	NULL	Protein SEY1 homolog OS=Plasmodium knowlesi 	B3LAJ9	28.7
+HtGene0183	5808	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8ILT4	35.0
+HtGene0199	4221	NULL	Kinesin-related protein, putative OS=Plasmodium 	B3L436	28.8
+HtGene0206	1449	NULL	Transporter, putative OS=Plasmodium vivax 	A5K6L4	32.2
+HtGene0209	2502	NULL	BSD domain, putative OS=Plasmodium falciparum 	Q8I303	29.1
+HtGene0210	1611	NULL	NADH dehydrogenase OS=Plasmodium gallinaceum 	I2FKD5	32.2
+HtGene0214	4287	NULL	6-phosphofructokinase, putative OS=Plasmodium 	Q8I2Z8	34.4
+HtGene0219	3300	NULL	Major facilitator superfamily protein, 	Q7RQY4	30.7
+HtGene0225	792	NULL	40S ribosomal protein SA OS=Plasmodium falciparum 	Q8IJD4	35.5
+HtGene0226	858	NULL	Biotin--acetyl-CoA-carboxylase ligase, 	B3L231	30.8
+HtGene0230	1284	NULL	Merozoite capping protein 1, putative 	B3L235	34.4
+HtGene0231	531	NULL	DNA-directed RNA polymerase II, putative 	Q8IJC9	34.5
+HtGene0240	1056	NULL	FAD synthetase, putative OS=Plasmodium 	A5K7H6	29.3
+HtGene0241	1218	NULL	Conserved protein OS=Plasmodium falciparum 	Q8IJP4	27.3
+HtGene0243	1959	NULL	Methionine aminopeptidase (Fragment) OS=Plasmodium 	Q4Y1K1	35.1
+HtGene0246	1719	NULL	Hsp60, putative OS=Plasmodium knowlesi 	B3L3U9	35.0
+HtGene0248	2229	NULL	Enolase OS=Plasmodium gallinaceum GN=ENO 	I2FKC3	33.3
+HtGene0256	1548	unique9	Predicted protein (Fragment) OS=Nematostella 	A7T1T8	35.5
+HtGene0257	5082	unique9	Collagen triple helix repeat, putative 	D8N114	33.5
+HtGene0264	3096	NULL	Regulatory protein, putative OS=Plasmodium 	B3L4H6	29.0
+HtGene0270	1278	NULL	Ubiquitin domain containing protein OS=Plasmodium 	Q8IIM8	37.9
+HtGene0274	1818	NULL	Conserved Plasmodium membrane protein 	Q8IIM4	28.0
+HtGene0276	1098	NULL	Rhomboid protease ROM1, putative OS=Plasmodium 	Q8IIM2	32.1
+HtGene0286	2466	NULL	DNA replication licensing factor MCM7, 	A5KA60	33.3
+HtGene0287	2544	NULL	Origin recognition complex subunit 2, 	Q8IC17	25.5
+HtGene0289	1071	NULL	Dimethyladenosine transferase, putative 	Q7R993	28.5
+HtGene0297	930	NULL	Uracil-DNA glycosylase, putative OS=Plasmodium 	Q4Z181	31.3
+HtGene0302	1254	NULL	MRNA capping enzyme, putative OS=Plasmodium 	Q4Z174	29.4
+HtGene0308	555	NULL	Mannosyltransferase-related OS=Plasmodium 	Q7RLW2	27.7
+HtGene0309	4854	NULL	Kinesin-related protein, putative (Fragment) 	Q4XNS6	34.5
+HtGene0313	642	NULL	Heat shock protein DnaJ homologue Pfj4 	Q7RQ78	37.9
+HtGene0316	3825	NULL	Inositol polyphosphate kinase, putative 	Q8IEF3	28.6
+HtGene0318	3585	NULL	Exportin 1-like protein, putative OS=Plasmodium 	Q8IEF5	29.6
+HtGene0320	939	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4XUB1	33.1
+HtGene0328	1077	NULL	TFIIH basal transcription factor subunit 	Q8IEG6	30.2
+HtGene0341	687	NULL	60S ribosomal protein L13, putative OS=Plasmodium 	Q4X4D3	34.2
+HtGene0351	678	NULL	Putative retrotransposon nucleocapsid 	K1WYI3	30.1
+HtGene0364	5946	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4YS73	32.1
+HtGene0365	828	NULL	rRNA processing protein, putative OS=Plasmodium 	Q8IIR2	29.5
+HtGene0369	1683	NULL	DnaJ domain containing protein OS=Plasmodium 	A5K4B0	30.0
+HtGene0380	450	NULL	60S ribosomal protein L26, putative OS=Plasmodium 	O77364	34.2
+HtGene0383	1365	NULL	Glycogen synthase kinase 3 OS=Plasmodium 	O77344	28.2
+HtGene0386	2997	NULL	Zinc finger protein (Fragment) OS=Plasmodium 	K6UJT2	28.9
+HtGene0388	1731	NULL	Pre-mRNA splicing factor PRP17, putative 	A5K003	31.9
+HtGene0390	684	NULL	Ribulose-phosphate 3-epimerase OS=Plasmodium 	Q4YGS0	34.4
+HtGene0392	5073	NULL	ATPase 2 OS=Plasmodium falciparum PE=4 	Q27720	31.2
+HtGene0393	6060	NULL	Clathrin heavy chain, putative OS=Plasmodium 	Q8I5L6	28.6
+HtGene0395	3651	NULL	Transportin, putative OS=Plasmodium knowlesi 	B3L7D0	32.7
+HtGene0397	3000	NULL	Acetyl-CoA synthetase, putative (Fragment) 	Q4Y5M3	33.3
+HtGene0399	29358	NULL	Ubiquitin-transferase, putative OS=Plasmodium 	B3L7C6	31.2
+HtGene0401	2412	NULL	DNA helicase, putative OS=Plasmodium knowlesi 	B3L2K3	32.4
+HtGene0404	1776	NULL	Eukaryotic translation initiation factor 	Q8I2X0	31.6
+HtGene0405	1200	NULL	Acid phosphatase, putative OS=Plasmodium 	B3L2J8	32.1
+HtGene0406	2877	NULL	78 kDa glucose-regulated protein OS=Plasmodium 	K6UJA6	30.6
+HtGene0407	1098	NULL	ATP binding protein, putative OS=Plasmodium 	B3L2J5	29.3
+HtGene0428	1485	NULL	Vacuolar ATP synthase subunit b, putative 	A5KAN4	35.4
+HtGene0431	834	unique9	null	null	27.6
+HtGene0432	1557	unique9	null	null	32.1
+HtGene0442	2802	NULL	Minichromosome maintenance protein 3, 	Q8I3J5	33.9
+HtGene0443	381	NULL	Ubiquitin conjugating enzyme, putative 	Q8I3J4	34.6
+HtGene0444	2007	NULL	Ubiquitin carboxyl-terminal hydrolase 	B3L5Y9	32.2
+HtGene0447	1674	NULL	Hsp70 inoeracting protein, putative OS=Plasmodium 	B3L5Y6	37.3
+HtGene0450	3144	NULL	Beta adaptin protein, putative OS=Plasmodium 	Q8I3I6	31.0
+HtGene0451	2967	NULL	Eukaryotic translation initiation factor 	A5K977	30.2
+HtGene0454	2550	NULL	Eukaryotic translation initiation factor 	A5K909	31.1
+HtGene0457	4065	NULL	Vacuolar protein sorting-associated protein 	Q8I4T1	29.7
+HtGene0470	4806	NULL	Hyptohetical protein, putative (Fragment) 	Q4YN36	24.6
+HtGene0471	2391	NULL	Mitochondrial processing peptidase beta 	Q8MTV6	31.7
+HtGene0472	2145	NULL	Delta tubulin, putative OS=Plasmodium 	B3L312	25.8
+HtGene0476	3459	NULL	DNA excision-repair helicase, putative 	Q4YTZ2	27.0
+HtGene0481	705	NULL	Vacuolar ATP synthase subunit E, putative 	Q8I2H3	28.8
+HtGene0498	1359	NULL	Phosphoribosylpyrophosphate synthetase, 	Q4Z785	35.8
+HtGene0509	831	NULL	60S ribosomal protein L5, putative OS=Plasmodium 	Q8ILL3	34.8
+HtGene0510	933	NULL	Ribosomal protein L7a OS=Plasmodium cynomolgi 	K6UXG6	31.6
+HtGene0521	1386	NULL	Protein transport protein Sec61 alpha 	K6ULC9	33.3
+HtGene0526	678	NULL	14-3-3 protein, putative OS=Plasmodium 	C0H4V6	35.7
+HtGene0529	708	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K5S6	26.3
+HtGene0532	3048	NULL	SNF2-family protein, putative OS=Plasmodium 	B3L1B2	30.2
+HtGene0533	1032	NULL	U3 small nucleolar ribonucleoprotein protein, 	Q4Y4R8	28.9
+HtGene0534	2019	NULL	Heat shock protein 70 OS=Plasmodium yoelii 	Q7RBI5	38.4
+HtGene0539	5859	NULL	Histone acetyltransferase OS=Plasmodium 	Q6RGS5	32.1
+HtGene0544	1338	NULL	Putative ligase in lipoate biosynthesis 	Q7RG48	30.8
+HtGene0546	966	NULL	Mitochondrial 2-oxoglutarate/malate carrier 	A5K5L1	32.6
+HtGene0549	2010	NULL	RNA binding protein, putative OS=Plasmodium 	A5K1J8	28.8
+HtGene0553	1938	NULL	Proteasome subunit, putative OS=Plasmodium 	B3LAY5	26.4
+HtGene0562	11103	MSP1	Putative uncharacterized protein OS=Plasmodium 	A5K725	30.7
+HtGene0570	1173	NULL	Mitochondrial import receptor subunit 	C6KT11	34.1
+HtGene0573	912	NULL	Putative uncharacterized protein OS=Plasmodium 	C6KT13	27.4
+HtGene0575	402	NULL	Histone H2A OS=Plasmodium yoelii yoelii 	Q7REI8	38.6
+HtGene0584	4032	NULL	Drosophila melanogaster CG13900 gene product 	Q7RIV2	34.4
+HtGene0599	2025	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4XQ57	29.1
+HtGene0612	2964	NULL	NAD synthase, putative OS=Plasmodium falciparum 	Q8I2P2	27.8
+HtGene0634	4464	NULL	Protein phosphatase, putative OS=Plasmodium 	Q8IDE5	30.8
+HtGene0644	960	NULL	Ribosomal protein S5 (Fragment) OS=Plasmodium 	Q7RA04	35.7
+HtGene0646	588	HDP	Heme ligase OS=Plasmodium falciparum (isolate 	Q8IL04	32.3
+HtGene0648	516	NULL	Centrin OS=Plasmodium cynomolgi strain 	K6UZL0	33.1
+HtGene0653	1965	NULL	Putative uncharacterized protein (Fragment) 	Q4YCG3	34.5
+HtGene0656	789	NULL	Diphthine synthase OS=Plasmodium falciparum 	Q8IJV5	27.2
+HtGene0657	735	NULL	Adenylate kinase, putative OS=Plasmodium 	Q4YSZ8	33.3
+HtGene0659	1446	NULL	Nucleolar protein NOP5, putative OS=Plasmodium 	A5K7A9	31.5
+HtGene0660	1338	NULL	Tubulin beta chain OS=Plasmodium yoelii 	Q7RCR6	38.6
+HtGene0662	8997	NULL	Guanine-nucleotide-exchange-factor OS=Plasmodium 	K6VFT0	28.3
+HtGene0701	4134	NULL	DNA-directed RNA polymerase OS=Plasmodium 	B3L0J5	35.5
+HtGene0708	2457	NULL	Rhoptry neck protein 6 OS=Plasmodium falciparum 	O96229	28.4
+HtGene0710	2571	NULL	Serine/threonine-protein phosphatase OS=Plasmodium 	Q4Z2M2	36.8
+HtGene0716	1698	THI	Thiamine-phosphate pyrophosphorylase OS=Plasmodium 	Q3MSL9	29.0
+HtGene0719	1521	NULL	Chaperone, putative OS=Plasmodium falciparum 	C6KST5	29.0
+HtGene0721	5886	NULL	Rhoptry protein, putative OS=Plasmodium 	Q8IKG8	27.6
+HtGene0723	390	NULL	60S ribosome subunit biogenesis protein 	Q8IKH0	34.1
+HtGene0727	3483	NULL	26S proteasome subunit, putative OS=Plasmodium 	B3L997	34.4
+HtGene0730	1494	NULL	Chromatin-binding protein, putative OS=Plasmodium 	O96267	26.0
+HtGene0733	1008	NULL	Pseudouridine synthetase, putative OS=Plasmodium 	A5KBT2	25.9
+HtGene0734	3033	NULL	Replication factor C subunit 1, putative 	O96271	30.6
+HtGene0737	1122	NULL	RNA pseudouridylate synthase, putative 	Q8I5D3	22.2
+HtGene0747	4671	NULL	BOP1-like protein, putative OS=Plasmodium 	Q8IM36	29.3
+HtGene0749	1050	NULL	Ribonucleoside-diphosphate reductase small 	P50650	29.7
+HtGene0757	543	18S_28S	null	null	39.0
+HtGene0759	1437	Unique1736	null	null	36.4
+HtGene0764	420	NULL	40S ribosomal protein S10, putative OS=Plasmodium 	Q8IBQ5	32.6
+HtGene0765	7869	NULL	Putative uncharacterized protein (Fragment) 	Q4Y066	29.1
+HtGene0768	924	NULL	Prohibitin-like protein, putative OS=Plasmodium 	A5K614	26.8
+HtGene0770	465	NULL	Small GTP-binding protein OS=Plasmodium 	Q9U8B7	34.2
+HtGene0773	1734	NULL	Dihydrofolate reductase/thymidylate synthase 	Q95US9	31.5
+HtGene0775	2070	NULL	Mitochondrial membrane protein OS=Plasmodium 	K6UIT2	28.3
+HtGene0779	648	NULL	Sybindin-like protein, putative OS=Plasmodium 	O77358	30.1
+HtGene0791	5274	NULL	SUMO ligase, putative OS=Plasmodium falciparum 	C0H5J4	30.7
+HtGene0793	3507	NULL	Falcilysin, putative OS=Plasmodium knowlesi 	B3L714	31.9
+HtGene0794	1182	NULL	Poly(A)-binding protein, putative OS=Plasmodium 	A5K2L5	33.8
+HtGene0798	2076	NULL	Uncharacterized protein OS=Plasmodium 	Q7RQ99	30.3
+HtGene0800	1782	NULL	Spliceosome-associated protein 49 (Fragment) 	K6UMD2	38.3
+HtGene0806	2799	NULL	Glycine-tRNA ligase, putative OS=Plasmodium 	Q8ILP6	27.7
+HtGene0810	5181	NULL	POM1, putative (Fragment) OS=Plasmodium 	Q4XZS0	28.0
+HtGene0812	2007	NULL	Putative SAM-dependent methyltransferase 	Q7RT41	28.2
+HtGene0834	1848	NULL	Putative ubiquitin-conjugating enzyme 	Q7RK78	30.7
+HtGene0835	1035	NULL	Nucleosome assembly protein 1, putative 	A5K0D9	30.1
+HtGene0846	1290	NULL	Protein disulfide isomerase OS=Plasmodium 	Q8II23	28.6
+HtGene0847	1992	NULL	Heat shock protein hsp70 homologue, putative 	B3L5E9	35.6
+HtGene0852	2025	AMA1	Apical membrane antigen 1 (Fragment) OS=Plasmodium 	I4CGZ0	34.1
+HtGene0854	3585	unique9	Collagen triple helix repeat, putative 	D8N114	30.8
+HtGene0856	6147	NULL	Cysteine-rich surface protein (Fragment) 	C5HDW9	28.6
+HtGene0861	2577	NULL	mRNA decay protein OS=Plasmodium cynomolgi 	K6V6E3	27.7
+HtGene0862	1230	NULL	Nucleolus BRIX protein, putative OS=Plasmodium 	Q8IBG5	29.8
+HtGene0863	2826	NULL	mRNA (N6-adenosine)-methyltransferase, 	Q8I6Z2	32.4
+HtGene0866	2748	NULL	N2,N2-dimethylguanosine tRNA methyltransferase 	Q7RG46	29.7
+HtGene0872	1944	NULL	Translocation protein SEC63, putative 	A5JZH6	33.6
+HtGene0876	1317	NULL	Tat-binding protein homolog OS=Plasmodium 	Q8I4U5	33.5
+HtGene0887	1068	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8IKP4	30.0
+HtGene0899	1557	NULL	Elongation factor Tu OS=Plasmodium knowlesi 	B3L8S5	31.8
+HtGene0904	1467	NULL	Pepsinogen, putative OS=Plasmodium chabaudi 	Q4XNM3	35.7
+HtGene0906	3201	NULL	Regulator of chromosome condensation, 	C0H4M6	34.6
+HtGene0907	1959	NULL	Sin3 associated polypeptide p18-like protein 	K6UHV8	32.3
+HtGene0925	1068	PTRAMP	Thrombospondin-related apical membrane 	Q8I5M8	31.4
+HtGene0939	399	NULL	G10 protein, putative OS=Plasmodium knowlesi 	B3L635	33.8
+HtGene0941	4221	NULL	Multidrug resistance protein OS=Plasmodium 	Q7RSV7	31.7
+HtGene0942	1542	NULL	Mitochondrial processing peptidase alpha 	A5K9C8	31.0
+HtGene0947	1377	NULL	Dolichyl-diphosphooligosaccharide--protein-glycot 	A5K6R0	21.9
+HtGene0948	1530	NULL	Sugar transporter, putative OS=Plasmodium 	Q8I2V8	29.3
+HtGene0953	1089	NULL	Nucleosome assembly protein 1, putative 	A5K6Q4	35.0
+HtGene0958	2256	NULL	Cysteine-rich surface protein (Fragment) 	C5HXB3	28.6
+HtGene0961	2589	NULL	Heat shock protein 101, putative OS=Plasmodium 	B3L4X1	32.8
+HtGene0974	525	NULL	Cytochrome c oxidase subunit II OS=Plasmodium 	Q7RQ42	32.0
+HtGene0979	1716	NULL	ATP-dependent RNA Helicase, putative OS=Plasmodium 	O97285	32.2
+HtGene0980	495	NULL	Histone H2A OS=Plasmodium yoelii yoelii 	Q7RSC4	41.4
+HtGene0989	606	NULL	Ribosomal protein L1, putative OS=Plasmodium 	B3LA05	32.3
+HtGene0998	1743	TRSP	Putative uncharacterized protein OS=Plasmodium 	B3KZN6	28.2
+HtGene1007	303	NULL	60S ribosomal protein L27, putative OS=Plasmodium 	A5K3E8	33.0
+HtGene1012	456	NULL	Ribosomal protein S15, putative OS=Plasmodium 	Q7RHQ5	34.2
+HtGene1018	9033	NULL	Putative 26s proteosome regulatory subunit 	B3KZ18	28.4
+HtGene1022	4521	NULL	Protein kinase, putative (Fragment) OS=Plasmodium 	Q4X4M7	32.3
+HtGene1025	531	NULL	Small GTPase Rab6, putative OS=Plasmodium 	A5K5A7	30.9
+HtGene1029	1155	NULL	Vacuolar ATP synthase subunit d, putative 	A5K3A9	32.0
+HtGene1030	2109	NULL	Peptidase, putative OS=Plasmodium knowlesi 	B3L9B1	32.8
+HtGene1040	1608	TRAP	Thrombospondin related anonymous protein 	Q01508	37.1
+HtGene1048	4338	NULL	ATE-like aminoacyl-tRNA-protein transferase 	Q195H6	30.9
+HtGene1050	627	NULL	SPATR protein, putative OS=Plasmodium 	O96207	32.4
+HtGene1053	345	NULL	40S ribosomal protein S20e, putative OS=Plasmodium 	Q8IK02	37.4
+HtGene1056	3771	NULL	U5 small nuclear ribonuclear protein OS=Plasmodium 	K6UD47	31.3
+HtGene1058	597	NULL	Ribosomal protein l13, putative OS=Plasmodium 	B3L3H1	33.5
+HtGene1072	2286	NULL	Flavodoxin-like protein OS=Plasmodium 	C0H553	33.6
+HtGene1073	2220	NULL	MAC/Perforin, putative OS=Plasmodium falciparum 	Q8I2S3	35.0
+HtGene1074	2496	NULL	DNA-directed RNA polymerase II OS=Plasmodium 	K6URN3	32.1
+HtGene1077	3021	NULL	Cg4 protein OS=Plasmodium falciparum (isolate 	Q8IC01	32.3
+HtGene1078	660	NULL	Plasmodium falciparum CG8 OS=Plasmodium 	Q7REK0	36.2
+HtGene1080	2169	NULL	Heat shock protein 86 OS=Plasmodium falciparum 	Q8IC05	34.0
+HtGene1092	702	NULL	Vesicle-associated membrane protein, putative 	B3LA19	31.9
+HtGene1093	588	NULL	Triosephosphate isomerase OS=Plasmodium 	I2FKC0	35.7
+HtGene1101	3189	NULL	5'-3' exonuclease, putative OS=Plasmodium 	B3L0V5	27.5
+HtGene1112	1647	NULL	U3 small nucleolar ribonucleoprotein, 	Q8IM49	26.6
+HtGene1120	2559	NULL	Kelch protein, putative OS=Plasmodium 	Q8IDQ2	29.3
+HtGene1129	2595	NULL	Polyadenylate-binding protein, putative 	B3LCN2	35.1
+HtGene1134	1791	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K037	30.4
+HtGene1141	4764	NULL	DNA repair endonuclease, putative OS=Plasmodium 	O96154	28.8
+HtGene1145	1626	NULL	Metabolite/drug transporter, putative 	Q8I3V1	36.5
+HtGene1160	3072	NULL	Alanine--tRNA ligase, putative OS=Plasmodium 	B3L6U2	31.9
+HtGene1163	1884	NULL	Putative FAD-dependent glycerol-3-phosphate 	Q7RDW7	31.0
+HtGene1167	1788	NULL	T-complex protein beta subunit, putative 	B3L4C8	31.3
+HtGene1168	426	NULL	40S ribosomal protein S23, putative OS=Plasmodium 	O97248	34.5
+HtGene1173	5638	NULL	ADA2-like protein (Fragment) OS=Plasmodium 	Q9U6L1	36.0
+HtGene1175	849	NULL	Prohibitin, putative OS=Plasmodium vivax 	A5K7H2	33.2
+HtGene1178	4212	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Z3Q0	26.6
+HtGene1179	1605	NULL	T-complex protein 1 subunit delta OS=Plasmodium 	C0H5I7	32.0
+HtGene1185	981	NULL	Histone H2B OS=Plasmodium yoelii yoelii 	Q7RLD0	32.0
+HtGene1191	7925	NULL	RuvB-like 1, putative OS=Plasmodium vivax 	A5JZT2	25.0
+HtGene1192	1416	NULL	Transporter (Fragment) OS=Plasmodium cynomolgi 	K6V1A6	28.0
+HtGene1195	2796	NULL	Monooxygenase, putative OS=Plasmodium 	Q7RGA6	28.1
+HtGene1196	2634	NULL	Importin beta, putative OS=Plasmodium 	Q8IAY9	31.7
+HtGene1205	1608	NULL	T-complex protein 1 epsilon subunit, putative 	O97282	34.1
+HtGene1206	1731	NULL	CPW-WPC family protein OS=Plasmodium falciparum 	C0H481	33.2
+HtGene1210	6372	NULL	Transporter, putative OS=Plasmodium knowlesi 	B3L408	25.6
+HtGene1215	963	NULL	Pyruvate kinase OS=Plasmodium gallinaceum 	I2FKC4	33.2
+HtGene1223	288	NULL	ATP synthase subunit C, putative OS=Plasmodium 	Q7RC85	36.5
+HtGene1224	3234	NULL	Methyltransferase, putative OS=Plasmodium 	Q8IDF8	30.0
+HtGene1228	735	NULL	Proteasome subunit alpha type OS=Plasmodium 	B3L786	30.5
+HtGene1229	546	NULL	Proteasome subunit alpha type OS=Plasmodium 	B3L787	29.7
+HtGene1232	1596	NULL	ATP-dependent DNA helicase, putative OS=Plasmodium 	Q8ID85	36.7
+HtGene1239	4146	NULL	DNA mismatch-repair protein, putative 	B3KZ15	29.3
+HtGene1243	4818	NULL	LCCL domain-containing protein CCP3 OS=Plasmodium 	Q8IM24	37.5
+HtGene1244	1194	NULL	Fe-S-cluster redox enzyme OS=Plasmodium 	K6UEM7	31.5
+HtGene1245	840	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4XN36	34.3
+HtGene1246	573	NULL	Vacuolar protein sorting 29, putative 	B3LAU3	32.3
+HtGene1255	2538	NULL	Endoplasmin homolog, putative OS=Plasmodium 	Q8I0V4	30.5
+HtGene1260	2490	NULL	Putative splicing factor OS=Plasmodium 	Q7RDI7	34.2
+HtGene1265	1191	Unique1736	null	null	32.8
+HtGene1266	6990	Unique9	null	null	28.8
+HtGene1267	3039	Unique9	null	null	30.6
+HtGene1275	459	NULL	Uncharacterized protein OS=Plasmodium 	Q7RQV4	30.9
+HtGene1277	1173	NULL	GTP-ase activating protein for Arf containing 	K6UN86	32.2
+HtGene1288	2136	NULL	Ferrodoxin reductase-like protein OS=Plasmodium 	Q8IBP8	30.1
+HtGene1291	2907	NULL	DNA replication licensing factor MCM4, 	A5JZG0	32.3
+HtGene1292	2307	NULL	Ubiquitin Carboxyl-terminal Hydrolase-like 	Q4YTH2	27.1
+HtGene1294	4170	NULL	Putative uncharacterized protein (Fragment) 	Q4XZP4	32.1
+HtGene1296	2304	NULL	Choline-phosphate cytidylyltransferase OS=Plasmodium 	P49587	32.1
+HtGene1299	594	NULL	40S ribosomal protein S15/S19, putative 	C0H5C2	31.5
+HtGene1302	618	NULL	Ferredoxin, putative OS=Plasmodium vivax 	A5JZH0	32.2
+HtGene1309	1254	NULL	Ornithine aminotransferase OS=Plasmodium 	Q07805	31.6
+HtGene1310	1371	NULL	Putative uncharacterized protein OS=Plasmodium 	B3L7R2	26.9
+HtGene1314	1887	NULL	Binding protein, putative OS=Plasmodium 	O97224	24.6
+HtGene1316	543	NULL	Thioredoxin-like redox-active protein, 	B3L4G4	24.5
+HtGene1319	3966	NULL	Leucyl-trna synthetase, cytoplasmic, putative 	B3L7I1	28.9
+HtGene1328	1308	NULL	Cytochrome c1 OS=Plasmodium gallinaceum 	I2FKD6	34.8
+HtGene1336	1317	NULL	Lipoate-protein ligase A type 2 OS=Plasmodium 	Q8I2S0	24.8
+HtGene1339	774	NULL	RNA-binding protein, putative OS=Plasmodium 	A5K6V3	37.3
+HtGene1344	1137	NULL	Thiamin pyrophosphokinase, putative OS=Plasmodium 	B3L2R0	30.7
+HtGene1350	2115	NULL	Hydrolase, alpha/beta fold family, putative 	Q7RD53	28.7
+HtGene1351	2775	NULL	PA14 domain containing protein OS=Plasmodium 	A5K3P2	32.0
+HtGene1356	2433	NULL	Elongation factor 2 OS=Plasmodium falciparum 	Q8IKW5	33.6
+HtGene1362	1518	NULL	Structure specific recognition protein 	Q8IL56	28.7
+HtGene1364	1761	NULL	Putative uncharacterized protein (Fragment) 	Q4YBL6	27.8
+HtGene1369	2301	NULL	Pescadillo N-terminus domain containing 	A5K4A1	23.4
+HtGene1371	1347	NULL	Rad51 homolog, putative OS=Plasmodium 	Q4Z3S5	38.2
+HtGene1384	2022	NULL	Similar to U3 snoRNP-associated 55-kDa 	Q4YW78	30.0
+HtGene1400	6051	NULL	Malaria antigen OS=Plasmodium yoelii yoelii 	Q7RRF2	28.8
+HtGene1401	1893	NULL	Malaria antigen, putative (Fragment) OS=Plasmodium 	Q4YY49	32.9
+HtGene1407	714	NULL	Appr-1-p processing enzyme OS=Plasmodium 	K6VFM4	29.0
+HtGene1410	5130	NULL	Chloroquine resistance marker protein 	Q968T7	26.5
+HtGene1419	2715	NULL	Initiation factor 2 subunit family, putative 	Q8IJQ6	26.6
+HtGene1425	699	NULL	Splicing factor 3a subunit, putative OS=Plasmodium 	C6KT39	29.8
+HtGene1437	741	NULL	RNA binding protein OS=Plasmodium cynomolgi 	K6UUX6	37.4
+HtGene1439	489	NULL	Thioredoxin domain containing protein 	A5K787	30.1
+HtGene1445	921	NULL	Co-chaperone GrpE, putative OS=Plasmodium 	A5K4Q7	26.2
+HtGene1451	1752	NULL	Aminomethyl transferase domain containing 	A5K3N6	26.7
+HtGene1453	1623	NULL	Rhoptry neck protein 2 (Fragment) OS=Plasmodium 	B9A5A0	34.0
+HtGene1454	4248	NULL	Rhoptry neck protein 2 (Fragment) OS=Plasmodium 	I0J1H7	30.6
+HtGene1456	2715	NULL	Sortilin, putative OS=Plasmodium knowlesi 	B3L9P9	32.2
+HtGene1464	504	NULL	DNA primase OS=Plasmodium knowlesi (strain 	B3LA31	35.9
+HtGene1465	873	NULL	2-Cys peroxiredoxin OS=Plasmodium falciparum 	Q9N699	32.0
+HtGene1467	8022	NULL	PfS230 paralog-related (Fragment) OS=Plasmodium 	Q7RHX6	30.9
+HtGene1474	3177	NULL	Valine-tRNA ligase, putative OS=Plasmodium 	Q8IKL5	30.5
+HtGene1479	5856	NULL	Dihydrolipoamide acyltransferase, putative 	Q8IJJ4	28.0
+HtGene1480	501	NULL	ADP-ribosylation factor 1 OS=Plasmodium 	Q25761	33.3
+HtGene1484	1377	NULL	Plasmepsin OS=Plasmodium malariae PE=1 	O60990	31.1
+HtGene1491	1248	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K4Y5	35.0
+HtGene1494	1230	NULL	Eukaryotic initiation factor, putative 	A5K665	30.6
+HtGene1496	8214	NULL	U5 small nuclear ribonucleoprotein-specific 	A5K663	27.4
+HtGene1498	1248	NULL	Alpha-tubulin ii OS=Plasmodium falciparum 	Q8IFP3	37.3
+HtGene1500	4986	NULL	Multidrug resistance protein 1 OS=Plasmodium 	D0QF05	30.1
+HtGene1501	5160	NULL	Conserved Plasmodium membrane protein 	Q8I5C8	28.2
+HtGene1505	1206	NULL	S-adenosylmethionine synthetase OS=Plasmodium 	Q7RBA1	33.9
+HtGene1507	3063	NULL	Phosphoglycerate kinase OS=Plasmodium 	I2FKC2	30.7
+HtGene1508	6531	NULL	Pre-mRNA splicing factor protein OS=Plasmodium 	K6UD13	25.0
+HtGene1519	657	NULL	60S ribosomal protein L10, putative OS=Plasmodium 	A5K186	36.4
+HtGene1524	1131	NULL	DNAJ protein, putative OS=Plasmodium falciparum 	Q8ILV6	28.6
+HtGene1525	1479	NULL	Diphthamide biosynthesis protein 1 OS=Plasmodium 	Q4Y626	26.9
+HtGene1534	2262	NULL	Putative uncharacterized protein OS=Plasmodium 	A5JZ84	29.2
+HtGene1536	5286	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K7C7	29.5
+HtGene1540	7845	NULL	Kinesin-like protein, putative OS=Plasmodium 	B3L3N8	31.9
+HtGene1549	1758	NULL	Vacuolar ATP synthase catalytic subunit 	A5JZB0	34.6
+HtGene1550	3396	NULL	M1-family aminopeptidase OS=Plasmodium 	Q8IEK1	33.8
+HtGene1554	2490	NULL	Deoxyribodipyrimidine photolyase, putative 	A5K9M1	28.2
+HtGene1557	1671	NULL	Adrenodoxin reductase, putative OS=Plasmodium 	B3L5K2	25.7
+HtGene1559	1347	NULL	AAA family ATPase OS=Plasmodium cynomolgi 	K6VBU7	31.6
+HtGene1563	501	NULL	Ubiquitin related modifier homologue OS=Plasmodium 	Q8IHY3	25.1
+HtGene1572	588	NULL	Proteasome subunit beta type OS=Plasmodium 	Q7RA40	31.1
+HtGene1574	540	NULL	Exported protein 2 OS=Plasmodium falciparum 	Q8IKC8	32.6
+HtGene1577	513	NULL	RNA binding protein, putative OS=Plasmodium 	Q8IDA4	32.4
+HtGene1581	906	NULL	Histone binding protein, putative OS=Plasmodium 	Q8I5Y9	32.0
+HtGene1582	3279	NULL	Conserved Plasmodium protein OS=Plasmodium 	Q8I5Z0	35.4
+HtGene1585	1116	NULL	UMP-CMP kinase, putative OS=Plasmodium 	Q8I231	30.8
+HtGene1589	1374	NULL	Histone deacetylase OS=Plasmodium falciparum 	Q9XYC7	36.2
+HtGene1591	2613	NULL	Adapter-related protein complex 4 beta 	K6UCD9	25.3
+HtGene1595	1269	NULL	Rhoptry protein, putative OS=Plasmodium 	B3L364	29.7
+HtGene1603	1110	NULL	SNARE protein, putative OS=Plasmodium 	Q8I4Z9	23.1
+HtGene1607	5265	NULL	Putative uncharacterized protein OS=Plasmodium 	C6KSN6	30.4
+HtGene1614	5940	NULL	DNA repair protein RAD50 OS=Plasmodium 	K6UE00	24.4
+HtGene1615	588	NULL	WD domain G-beta repeat domain containing 	K6URB1	24.1
+HtGene1622	2061	NULL	Transmembrane protein (Fragment) OS=Plasmodium 	K6UKA4	26.5
+HtGene1625	3681	NULL	Subtilisin-like protease 2, putative OS=Plasmodium 	B3L5H8	32.8
+HtGene1628	858	NULL	Mitochondrial carrier protein, putative 	C0H498	26.3
+HtGene1631	2637	NULL	Putative uncharacterized protein (Fragment) 	Q4YHK8	24.8
+HtGene1636	3468	NULL	Bromodomain protein, putative OS=Plasmodium 	B3LCC5	34.9
+HtGene1638	1053	NULL	Iron-sulfur subunit of succinate dehydrogenase 	I2FKC9	30.4
+HtGene1642	657	NULL	Cytochrome c oxidase subunit 2, putative 	Q8ID89	33.8
+HtGene1644	825	NULL	Proliferating cell nuclear antigen, putative 	B3L702	32.7
+HtGene1648	870	NULL	Translation elongation factor EF-1, subunit 	Q8IIC9	32.8
+HtGene1652	420	NULL	High mobility group-like protein NHP2, 	Q4YAU4	35.7
+HtGene1657	3150	NULL	Cysteine-rich surface protein (Fragment) 	C5HX71	26.5
+HtGene1662	621	NULL	Iron-sulfur assembly protein, putative 	O96161	26.9
+HtGene1665	654	NULL	Heat shock protein hslv OS=Plasmodium 	Q8I5B6	29.4
+HtGene1670	4026	NULL	DNA-directed RNA polymerase (Fragment) 	Q4Z4B5	27.1
+HtGene1671	1695	NULL	Drosophila melanogaster CG11779 gene product, 	Q7RAE2	31.0
+HtGene1688	1146	NULL	mRNA cleavage factor-like protein, putative 	Q8I0V9	29.1
+HtGene1689	6780	NULL	Sequestrin, putative (Fragment) OS=Plasmodium 	Q4YNY0	33.9
+HtGene1690	3300	NULL	Sequestrin, putative (Fragment) OS=Plasmodium 	Q4YNY0	36.2
+HtGene1695	5508	NULL	P-type ATPase, putative OS=Plasmodium 	Q4YZA7	33.5
+HtGene1697	375	NULL	Ubiquitin--protein ligase, putative (Fragment) 	Q4YKG1	33.1
+HtGene1698	2460	NULL	Endonuclease/exonuclease/phosphatase domain 	K6UV61	27.5
+HtGene1707	2547	NULL	Cysteine-rich surface protein (Fragment) 	C5HX85	33.7
+HtGene1711	2751	NULL	Helicase with Zn-finger motif, putative 	Q8I353	29.7
+HtGene1714	5559	NULL	Sequestrin, putative (Fragment) OS=Plasmodium 	Q4YNY0	33.9
+HtGene1715	8661	NULL	Pre-mRNA splicing factor, putative OS=Plasmodium 	B3KZY4	33.6
+HtGene1718	1443	NULL	Pseudouridine synthase, putative OS=Plasmodium 	Q8ILS0	35.8
+HtGene1727	1251	NULL	Mannose-1-phosphate guanyltransferase, 	Q8ILP1	28.1
+HtGene1740	3399	NULL	Coatomer complex beta subunit, putative 	A5K6C9	28.0
+HtGene1746	1665	NULL	AP endonuclease 1 OS=Plasmodium yoelii 	Q7RCQ2	30.0
+HtGene1748	3195	NULL	Nucleotidyltransferase, putative OS=Plasmodium 	Q8IE04	31.3
+HtGene1750	3546	NULL	Putative uncharacterized protein OS=Plasmodium 	B3L8R1	33.4
+HtGene1751	888	NULL	Qa-SNARE protein, putative OS=Plasmodium 	Q8IE08	29.1
+HtGene1753	1320	NULL	ATPase, putative OS=Plasmodium falciparum 	Q8IKQ5	31.7
+HtGene1765	1869	NULL	Rhomboid protease OS=Plasmodium cynomolgi 	K6VCS7	36.0
+HtGene1766	1224	NULL	60S ribosomal protein L4, putative OS=Plasmodium 	Q8I431	36.7
+HtGene1767	2256	NULL	Subtilisin-like 1 serine protease OS=Plasmodium 	E6Y8B9	31.2
+HtGene1771	945	NULL	Ribosomal phosphoprotein (Fragment) OS=Plasmodium 	Q705J5	37.6
+HtGene1772	1356	NULL	26S protease subunit regulatory subunit 	B3L5B0	33.4
+HtGene1776	1179	NULL	26S proteasome AAA-ATPase subunit RPT3, 	Q8I1V1	32.1
+HtGene1777	1341	NULL	Lysine decarboxylase (Fragment) OS=Plasmodium 	K6UT61	26.2
+HtGene1778	993	NULL	Apicoplast ribosomal protein L10, putative 	Q8I1U9	26.0
+HtGene1781	3534	NULL	DNA replication licensing factor MCM2, 	A5K152	31.9
+HtGene1794	1080	NULL	Ribonuclease OS=Plasmodium falciparum 	C6KT75	31.9
+HtGene1796	5466	NULL	Protein kinase, putative (Fragment) OS=Plasmodium 	Q4Z4Y3	33.6
+HtGene1798	2085	NULL	Transcription or splicing factor-like 	C6KT72	35.2
+HtGene1802	2562	NULL	Mitogen-activated protein kinase 1 OS=Plasmodium 	K6UM91	29.7
+HtGene1804	1932	NULL	GTPase, putative OS=Plasmodium knowlesi 	B3LA78	28.7
+HtGene1811	576	NULL	Flavoprotein, putative OS=Plasmodium berghei 	Q4YYT0	30.7
+HtGene1819	1236	NULL	3-oxoacyl-[acyl-carrier-protein] synthase 	A5K295	33.9
+HtGene1826	5139	NULL	Tryptophan--tRNA ligase, putative OS=Plasmodium 	Q8IDW3	27.9
+HtGene1827	957	NULL	Nuclear distribution gene C homolog OS=Plasmodium 	Q7RB97	31.9
+HtGene1830	1653	NULL	T-complex protein 1 subunit alpha OS=Plasmodium 	Q8II43	31.8
+HtGene1833	585	NULL	Ubiquitin-conjugating enzyme E2 I OS=Plasmodium 	K6VE24	27.5
+HtGene1839	1221	NULL	Putative DNA repair protein RAD23 OS=Plasmodium 	Q7RPE6	35.3
+HtGene1854	684	NULL	Apicoplast 1-acyl-sn-glycerol-3-phosphate 	Q8IL28	32.2
+HtGene1857	2892	NULL	Putative uncharacterized protein (Fragment) 	Q4YQR7	30.5
+HtGene1861	1194	NULL	Eukaryotic peptide chain release factor 	A5KBZ9	31.2
+HtGene1864	2337	NULL	Arginine N-methyltransferase 5, putative 	A5K2L6	30.1
+HtGene1865	2730	NULL	Vesicle transport protein, putative OS=Plasmodium 	B3L711	35.3
+HtGene1870	1161	NULL	Proliferation-associated protein, putative 	B3LAB0	29.2
+HtGene1881	9942	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8IKF6	34.9
+HtGene1888	789	NULL	40S ribosomal protein S3a OS=Plasmodium 	O97313	34.5
+HtGene1891	2994	NULL	Sporozoite invasion-associated protein 	K6US41	35.5
+HtGene1892	1980	NULL	Flap endonuclease 1 OS=Plasmodium knowlesi 	B3L014	31.3
+HtGene1901	1770	NULL	Ribosomal RNA methyltransferase OS=Plasmodium 	K6V932	27.4
+HtGene1914	498	NULL	Proteasome subunit alpha, putative OS=Plasmodium 	Q8IAR3	33.3
+HtGene1919	1395	NULL	Tyrosyl-tRNA synthetase, putative OS=Plasmodium 	Q8IAR7	30.9
+HtGene1938	1887	NULL	Delta-aminolevulinic acid synthetase OS=Plasmodium 	Q8I4X1	29.5
+HtGene1950	1020	NULL	DnaJ domain containing protein OS=Plasmodium 	A5K327	22.8
+HtGene1953	825	NULL	Cyclin 4, putative OS=Plasmodium vivax 	A5JZ40	28.2
+HtGene1957	7695	NULL	ERYTHROCYTE MEMBRANE PROTEIN PFEMP3 (Fragment) 	Q7PDK5	36.5
+HtGene1960	1785	NULL	Aspartyl-tRNA synthetase, putative OS=Plasmodium 	Q7RPE8	28.4
+HtGene1977	17952	NULL	Cysteine repeat modular protein 4, putative 	Q8IK84	28.6
+HtGene1979	1200	NULL	RNA helicase-1 OS=Plasmodium cynomolgi 	Q9U937	35.7
+HtGene1980	2463	NULL	U2 snRNP auxiliary factor, putative OS=Plasmodium 	A5K369	35.0
+HtGene1981	2469	NULL	Guanylyl cyclase OS=Plasmodium yoelii 	Q7RGI5	26.0
+HtGene1985	1548	NULL	DNA polymerase delta small subunit, putative 	Q4Z5F9	27.5
+HtGene1986	1728	TLP	Putative uncharacterized protein OS=Plasmodium 	B3L7N9	31.4
+HtGene1994	2604	NULL	Cysteine-rich surface protein (Fragment) 	C5HDX5	33.4
+HtGene1996	6726	NULL	DNA repair endonuclease, subunit (Fragment) 	Q7RGQ8	26.3
+HtGene1999	2898	NULL	Transcription elongation factor TFIIS.h, 	Q7RQ02	27.6
+HtGene2001	2616	NULL	Putative uncharacterized protein (Fragment) 	Q4XYU1	22.4
+HtGene2002	5139	NULL	Sec24-related protein, putative OS=Plasmodium 	B3KZY1	32.3
+HtGene2005	2199	NULL	Sequestrin, putative (Fragment) OS=Plasmodium 	Q4YNY0	34.8
+HtGene2016	1683	NULL	T-complex protein 1, theta subunit, putative 	A5KBY3	29.8
+HtGene2017	6744	NULL	Sec31p putative OS=Plasmodium falciparum 	O96221	32.0
+HtGene2027	1170	NULL	26S proteasome subunit, putative OS=Plasmodium 	B3L267	28.5
+HtGene2028	2121	NULL	Glycoprotease, putative OS=Plasmodium 	Q8IJ99	28.8
+HtGene2036	9213	NULL	DNA-directed RNA polymerase OS=Plasmodium 	K6VCM3	31.9
+HtGene2046	1584	NULL	Zinc finger protein, putative OS=Plasmodium 	C0H4E5	31.7
+HtGene2049	2433	NULL	Cysteine-rich surface protein (Fragment) 	C5HDV9	30.7
+HtGene2055	1578	NULL	Lysine--tRNA ligase OS=Plasmodium yoelii 	Q7RT79	31.4
+HtGene2057	1221	NULL	ATP binding protein, putative OS=Plasmodium 	B3L895	31.0
+HtGene2060	990	NULL	Actin, putative OS=Plasmodium vivax (strain 	A5K4C3	30.1
+HtGene2064	981	NULL	Replication factor c subunit 5, putative 	B3L4R3	28.4
+HtGene2105	4860	NULL	LCCL domain-containing protein CCP2 OS=Plasmodium 	K6VFH5	34.4
+HtGene2112	2400	NULL	Nucleolar GTP-binding protein 1 OS=Plasmodium 	Q7RK07	30.4
+HtGene2114	2124	falcipain	Vivapain OS=Plasmodium cynomolgi strain 	K6UDD9	32.9
+HtGene2120	8640	NULL	Biotin carboxylase subunit of acetyl CoA 	B3L960	31.0
+HtGene2133	1023	NULL	Replication factor C3 OS=Plasmodium falciparum 	Q9GR09	27.2
+HtGene2140	552	NULL	S4 domain, putative OS=Plasmodium yoelii 	Q7RH50	26.4
+HtGene2144	2001	NULL	Splicing factor 3B subunit 2 OS=Plasmodium 	K6ULS0	34.7
+HtGene2145	1317	NULL	Serine hydroxymethyltransferase, putative 	Q4YUP8	35.0
+HtGene2147	3075	NULL	TetQ family GTPase, putative OS=Plasmodium 	Q4Y0B9	28.5
+HtGene2148	4536	NULL	Putative uncharacterized protein (Fragment) 	Q4YUC0	32.5
+HtGene2150	2148	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K6J2	26.9
+HtGene2156	3699	NULL	Exoribonuclease, putative OS=Plasmodium 	A5K6G3	33.3
+HtGene2167	3132	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K2K0	26.4
+HtGene2169	1971	NULL	Bromodomain protein, putative OS=Plasmodium 	Q8IJ72	30.5
+HtGene2172	2622	NULL	Sec1 family OS=Plasmodium yoelii yoelii 	Q7RS95	26.9
+HtGene2173	660	NULL	Proliferating cell nuclear antigen OS=Plasmodium 	Q8WSN0	29.7
+HtGene2187	585	NULL	40S ribosomal protein S5, putative OS=Plasmodium 	Q8IBN5	40.9
+HtGene2194	804	NULL	Proteasome subunit beta type OS=Plasmodium 	Q4YSX6	33.0
+HtGene2197	1503	NULL	Signal recognition particle SRP54, putative 	Q8IKX4	31.7
+HtGene2201	8469	NULL	Clathrin coat assembly protein, putative 	Q8IIH2	29.6
+HtGene2206	4041	NULL	Regulator of nonsense transcripts, putative 	Q8IJY4	33.9
+HtGene2215	5817	NULL	DNA repair protein, putative OS=Plasmodium 	B3L6L5	28.8
+HtGene2225	600	NULL	G-beta repeat protein OS=Plasmodium cynomolgi 	K6UVM9	30.5
+HtGene2230	2718	NULL	Methionine--trna ligase, putative OS=Plasmodium 	B3L2B7	30.5
+HtGene2235	4449	NULL	GTPase, putative OS=Plasmodium falciparum 	C0H4V2	26.2
+HtGene2240	6492	NULL	CCR4-Not complex subunit, putative OS=Plasmodium 	B3L4J0	30.2
+HtGene2242	2445	NULL	Uncharacterized protein OS=Plasmodium 	Q7RRG4	32.5
+HtGene2246	7074	NULL	DNA-directed RNA polymerase OS=Plasmodium 	A5K7P4	35.4
+HtGene2251	1017	NULL	26S proteasome regulatory subunit, putative 	Q8I323	26.2
+HtGene2252	10246	NULL	Guanylyl cyclase OS=Plasmodium falciparum 	Q9N9H5	29.6
+HtGene2264	1335	MTRAP	Putative uncharacterized protein OS=Plasmodium 	A5KE06	28.9
+HtGene2267	510	NULL	Deoxyuridine 5'-triphosphate nucleotidohydrolase, 	Q8II92	29.6
+HtGene2282	447	NULL	40S ribosomal protein S14, putative OS=Plasmodium 	Q8I3U6	40.3
+HtGene2285	1116	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4YN29	26.6
+HtGene2300	3609	NULL	3'-5' exonuclease, putative OS=Plasmodium 	B3L9S0	27.8
+HtGene2304	2088	NULL	Nucleolar preribosomal assembly protein, 	C0H549	29.2
+HtGene2309	537	NULL	ER lumen protein retaining receptor OS=Plasmodium 	A5K2E5	29.4
+HtGene2321	780	NULL	Fe-S-cluster redox enzyme, putative OS=Plasmodium 	Q8I2T9	28.5
+HtGene2323	2553	NULL	ATP-dependent helicase, putative OS=Plasmodium 	B3L6M6	24.2
+HtGene2329	714	NULL	GTP-binding nuclear protein Ran OS=Plasmodium 	K6VB80	35.4
+HtGene2330	2415	NULL	Dna mismatch repair protein mlh1, putative 	B3L4Y1	30.1
+HtGene2333	2118	NULL	YL1 nuclear protein, putative OS=Plasmodium 	B3L9C0	31.4
+HtGene2341	2142	NULL	Transporter, putative OS=Plasmodium falciparum 	Q8I3M7	29.3
+HtGene2343	3378	NULL	Karyopherin beta OS=Plasmodium falciparum 	Q8I3M5	33.5
+HtGene2348	2505	NULL	DEAD-box RNA helicase, putative OS=Plasmodium 	Q4Z161	32.3
+HtGene2353	777	NULL	Putative uncharacterized protein OS=Plasmodium 	B3L4L0	35.0
+HtGene2363	3078	NULL	Dna gyrase subunit b, putative (Fragment) 	Q4X598	28.2
+HtGene2365	510	NULL	Protein phosphatase, putative (Fragment) 	Q4Y6P2	29.4
+HtGene2366	2598	NULL	Rna helicase, putative OS=Plasmodium knowlesi 	B3LCA3	34.2
+HtGene2370	2373	NULL	Protein kinase domain, putative (Fragment) 	Q7RKS7	26.8
+HtGene2380	1176	NULL	Rna methyltransferase, putative OS=Plasmodium 	B3L606	29.0
+HtGene2392	1455	NULL	AP endonuclease (DNA-[apurinic or apyrimidinic 	O97240	27.3
+HtGene2400	1578	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8ILM8	30.7
+HtGene2404	3150	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K879	30.3
+HtGene2406	2607	NULL	Krox-like protein. putative OS=Plasmodium 	C0H5G9	28.7
+HtGene2409	1815	NULL	Putative uncharacterized protein OS=Plasmodium 	B3L8G0	31.7
+HtGene2412	1407	NULL	Probable ribosome biogenesis protein PFL0985c 	Q8I5K8	28.5
+HtGene2414	3495	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K005	24.5
+HtGene2426	1134	NULL	Ring-infected erythrocyte surface antigen 	Q7RH32	30.9
+HtGene2433	3876	NULL	Exportin 1, putative OS=Plasmodium knowlesi 	B3L4H1	30.2
+HtGene2434	2313	NULL	N-ethylmaleimide-sensitive fusion protein,putative 	B3L4H0	28.4
+HtGene2437	1737	NULL	Glucose-6-phosphate isomerase OS=Plasmodium 	Q8ILA4	30.6
+HtGene2449	2697	NULL	Glutaminyl-tRNA synthetase, putative OS=Plasmodium 	Q8IE10	32.1
+HtGene2453	1416	NULL	Ubiquitin C-terminal hydrolase family 	K6UDE2	24.4
+HtGene2458	1182	NULL	Conserved GTP-binding protein, putative 	Q4Z568	27.7
+HtGene2460	1848	NULL	Putative uncharacterized protein (Fragment) 	Q4XWA1	30.1
+HtGene2467	4278	NULL	Similar to suppressor of Ty 5 homolog 	Q7RJZ3	34.3
+HtGene2482	2352	NULL	RNA helicase, putative OS=Plasmodium falciparum 	Q8IJI8	26.9
+HtGene2486	9849	NULL	TRAP-related protein OS=Plasmodium falciparum 	Q8IL45	26.2
+HtGene2489	1629	NULL	Seryl-trna synthetase, putative OS=Plasmodium 	B3L070	30.8
+HtGene2496	1860	NULL	RNAse L inhibitor protein, putative OS=Plasmodium 	B3L6T7	30.4
+HtGene2497	978	NULL	Proteasome regulatory subunit, putative 	Q8ID28	28.5
+HtGene2498	4323	NULL	Coatomer alpha subunit, putative OS=Plasmodium 	B3L7Y9	31.6
+HtGene2506	1755	NULL	Eukaryotic translation initiation factor 	A5K7A0	29.7
+HtGene2509	2628	NULL	RNA binding function, putative OS=Plasmodium 	A5K2C5	29.9
+HtGene2510	1728	NULL	Transmembrane amino acid transporter protein, 	A5K2C6	28.7
+HtGene2514	1692	NULL	Protein phosphatase 2C domain containing 	K6UW94	31.4
+HtGene2519	2865	NULL	Vacuolar protein sorting 35-related OS=Plasmodium 	Q7RNR9	25.4
+HtGene2523	4086	NULL	RNA helicase , putative (Fragment) OS=Plasmodium 	Q4YV55	25.9
+HtGene2524	5853	NULL	Rhoptry neck protein 3, putative OS=Plasmodium 	Q8I4R5	26.2
+HtGene2525	819	NULL	Prohibitin, putative. prohibitin, putative 	B3L0Z7	31.1
+HtGene2526	624	NULL	Putative uncharacterized protein OS=Plasmodium 	C0H4Y8	30.3
+HtGene2527	1572	NULL	Small GTPase Rab5c, putative OS=Plasmodium 	A5K9U6	26.1
+HtGene2529	1620	NULL	PfAARP2 protein, putative (Fragment) OS=Plasmodium 	Q4Z720	26.7
+HtGene2536	1881	NULL	Erythrocyte membrane-associated antigen 	K6UIU3	26.3
+HtGene2537	12210	NULL	Erythrocyte membrane-associated antigen, 	Q8IFP4	30.4
+HtGene2540	555	NULL	41-2 antigen OS=Plasmodium falciparum 	Q549B9	30.3
+HtGene2541	1263	NULL	DnaJ domain containing protein OS=Plasmodium 	A5K0M3	35.1
+HtGene2543	1920	NULL	eIF2A OS=Plasmodium falciparum (isolate 	Q8IL87	28.8
+HtGene2544	1603	NULL	Poly(A) polymerase PAP, putative OS=Plasmodium 	Q4Z667	25.0
+HtGene2546	4674	NULL	DNA polymerase 1 OS=Plasmodium cynomolgi 	K6UDW4	24.4
+HtGene2548	1596	NULL	Methylase, putative OS=Plasmodium knowlesi 	B3L886	25.7
+HtGene2554	1680	NULL	Importin subunit alpha OS=Plasmodium vivax 	A5JZQ5	32.3
+HtGene2555	3156	NULL	Putative uncharacterized protein (Fragment) 	Q4XT24	33.5
+HtGene2561	1677	NULL	Actin, putative OS=Plasmodium berghei 	Q4YWC7	28.1
+HtGene2568	3714	NULL	Cell cycle control protein, putative (Fragment) 	Q4YUK4	30.9
+HtGene2569	1413	Unique1736	null	null	33.5
+HtGene2572	1014	Unique1736	null	null	35.1
+HtGene2580	1392	NULL	Eukaryotic translation initiation factor,putative 	B3LAR0	34.8
+HtGene2592	1626	NULL	GMP synthetase, putative OS=Plasmodium 	A5K7F1	31.1
+HtGene2597	906	NULL	Phosphatidylglycerophosphate synthase 	B3L191	24.1
+HtGene2599	1161	CSP?	null	null	37.6
+HtGene2600	687	NULL	1-cys-glutaredoxin-like protein-1 OS=Plasmodium 	Q7K5X2	30.7
+HtGene2601	312	NULL	PV1H14140_P OS=Plasmodium vivax GN=PV1H14140w 	Q962K6	32.4
+HtGene2608	2370	NULL	Transcription factor IIIb subunit, putative 	Q8IKY2	31.5
+HtGene2613	537	NULL	40S ribosomal protein S18, putative OS=Plasmodium 	Q8IIA2	31.5
+HtGene2614	1059	NULL	60S ribosomal protein L34-a, putative 	Q4Z6Z6	29.8
+HtGene2615	1479	NULL	Nucleotide excision repair protein, putative 	Q8IBY6	24.9
+HtGene2619	1200	NULL	Nucleolar preribosomal assembly protein, 	O96138	28.4
+HtGene2630	2280	NULL	PfSec23 protein OS=Plasmodium falciparum 	Q8IB60	33.0
+HtGene2635	2739	NULL	Vacuolar proton-translocating ATPase subunit 	B3KZ79	34.0
+HtGene2637	378	NULL	Gas41 homologue, putative OS=Plasmodium 	C0H4S5	30.4
+HtGene2641	3708	NULL	Putative uncharacterized protein OS=Plasmodium 	A5KA56	26.6
+HtGene2646	1662	NULL	T-complex protein 1, gamma subunit, putative 	Q8I5C4	30.4
+HtGene2652	4827	NULL	Calcium-dependent protein kinase, putative 	Q8IID5	32.2
+HtGene2659	2412	NULL	DeliriumA (Fragment) OS=Plasmodium yoelii 	Q7RKW2	25.5
+HtGene2669	3621	NULL	Cloroquine resistance associated protein 	K6UPC6	25.2
+HtGene2678	1614	NULL	Ethanolamine-phosphate cytidylyltransferase,putative 	B3L8B6	31.8
+HtGene2682	6270	NULL	Myosin OS=Plasmodium falciparum (isolate 	Q8IE50	31.6
+HtGene2683	3399	NULL	SET domain protein, putative OS=Plasmodium 	Q8I1Z0	28.8
+HtGene2687	3762	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4XZG4	30.5
+HtGene2693	7638	NULL	Guanidine nucleotide exchange factor (Fragment) 	O61072	28.8
+HtGene2696	3612	NULL	Isoleucyl-tRNA synthetase, putative OS=Plasmodium 	Q7RNG8	28.2
+HtGene2697	744	NULL	Eukaryotic translation initiation factor 	K6ULH8	34.3
+HtGene2701	5142	NULL	Helicase, putative OS=Plasmodium vivax 	A5K7V8	21.2
+HtGene2704	6117	NULL	Putative uncharacterized protein (Fragment) 	Q4Y1I1	30.2
+HtGene2706	1425	NULL	eIF-4A-like DEAD family RNA helicase OS=Plasmodium 	K6UQC1	33.3
+HtGene2712	2565	NULL	Ribonucleoside-diphosphate reductase OS=Plasmodium 	Q8IL94	34.5
+HtGene2719	7431	NULL	DNA repair protein rad54, putative OS=Plasmodium 	B3KZB3	29.5
+HtGene2731	1506	NULL	Cytochrome c oxidase assembly protein 	A5K9G5	32.3
+HtGene2732	402	NULL	40S ribosomal protein S24 OS=Plasmodium 	Q8I3R6	33.3
+HtGene2735	9981	NULL	Chromodomain-helicase-DNA-binding protein 	K6UTL7	31.2
+HtGene2745	528	NULL	Histone h3, putative OS=Plasmodium knowlesi 	B3L8P6	38.6
+HtGene2747	1506	NULL	Coatomer delta subunit, putative OS=Plasmodium 	B3L5F7	24.1
+HtGene2748	4230	NULL	DNA-directed RNA polymerase OS=Plasmodium 	Q7RER1	33.6
+HtGene2751	3396	NULL	Calcium-dependent ATPase OS=Plasmodium 	Q30CZ5	31.8
+HtGene2757	1506	NULL	Glycerol kinase, putative OS=Plasmodium 	B3L878	35.1
+HtGene2758	621	NULL	Putative uncharacterized protein (Fragment) 	Q4YIA1	35.1
+HtGene2763	1024	NULL	Putative uncharacterized protein (Fragment) 	Q4XIH9	22.7
+HtGene2771	2994	NULL	Sequestrin, putative (Fragment) OS=Plasmodium 	Q4YNY0	34.7
+HtGene2798	3012	NULL	Conserved Plasmodium membrane protein 	Q8I5Y6	33.3
+HtGene2799	1071	NULL	IMP-specific 5'-nucleotidase, putative 	B3LB46	30.1
+HtGene2800	2700	NULL	Eukaryotic translation initiation factor 	Q4XXD2	31.4
+HtGene2805	876	NULL	DHHC zinc finger OS=Plasmodium cynomolgi 	K6UW07	26.6
+HtGene2808	5157	NULL	RNA binding protein, putative OS=Plasmodium 	Q8IJI3	32.7
+HtGene2815	2670	NULL	Glutamate--tRNA ligase OS=Plasmodium cynomolgi 	K6VEA2	31.1
+HtGene2816	3828	NULL	Kinesin OS=Plasmodium cynomolgi strain 	K6UJQ5	31.6
+HtGene2820	2547	NULL	Cell division cycle protein 48 homologue 	K6UDX5	36.4
+HtGene2831	1518	NULL	Coproporphyrinogen oxidase, putative OS=Plasmodium 	Q8IHU1	30.8
+HtGene2833	1977	NULL	DNA replication licensing factor MCM5, 	A5K0L6	34.7
+HtGene2835	3942	NULL	P-type ATPase4 OS=Plasmodium falciparum 	Q9U445	34.7
+HtGene2842	1167	NULL	Sec62, putative OS=Plasmodium falciparum 	Q8IL86	32.0
+HtGene2844	543	NULL	Bet3 transport protein, putative OS=Plasmodium 	Q8I1Q2	31.5
+HtGene2845	3018	NULL	Exonuclease i, putative OS=Plasmodium 	Q4Y9H0	27.2
+HtGene2846	2334	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8I2I8	25.9
+HtGene2867	1860	NULL	Prolyl-t-RNA synthase, putative OS=Plasmodium 	Q8I2Q5	21.1
+HtGene2872	3516	NULL	DNA-repair helicase, putative OS=Plasmodium 	B3LAT1	28.1
+HtGene2877	5949	NULL	Ubiquitination-mediated degradation component, 	C0H4Y0	29.9
+HtGene2878	864	NULL	SNARE protein, putative OS=Plasmodium 	Q8IB99	23.8
+HtGene2896	1551	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K9C5	33.5
+HtGene2901	2010	NULL	Mrna capping enzyme, putative OS=Plasmodium 	B3L3Y0	25.2
+HtGene2903	3693	NULL	O-acyltransferase OS=Plasmodium falciparum 	Q6F492	26.8
+HtGene2906	4131	NULL	Coatamer protein, beta subunit, putative 	Q8ILG6	26.6
+HtGene2912	1254	NULL	Arginyl-tRNA synthetase, putative (Fragment) 	Q4YBC3	26.6
+HtGene2914	1068	NULL	Ubiquinol-cytochrome c reductase, iron-sulfur 	Q7RCZ2	36.1
+HtGene2918	3360	NULL	ABC transporter, putative OS=Plasmodium 	A5K8F7	25.2
+HtGene2921	921	NULL	Serine/threonine-protein phosphatase OS=Plasmodium 	Q8MX29	31.8
+HtGene2922	6651	NULL	Protein kinase OS=Plasmodium cynomolgi 	K6UMF4	27.9
+HtGene2928	948	NULL	Protein kinase, putative OS=Plasmodium 	A5K7L3	28.1
+HtGene2931	2481	NULL	Putative uncharacterized protein (Fragment) 	Q4YYE1	31.0
+HtGene2938	2220	NULL	Bifunctional aminoacyl-tRNA synthetase, 	A5JZU9	31.0
+HtGene2941	2058	NULL	Cytidine triphosphate synthetase, putative 	B3LAR4	30.7
+HtGene2943	7995	NULL	SNF2 family protein, putative OS=Plasmodium 	B3L7G3	34.0
+HtGene2950	2841	NULL	RNA helicase, putative OS=Plasmodium yoelii 	Q7RA71	27.2
+HtGene2952	2346	NULL	Glucosamine--fructose-6-phosphate aminotransferase, 	B3L212	31.5
+HtGene2953	1614	NULL	Calcium/calmodulin-dependent protein kinase, 	Q8IBU7	26.5
+HtGene2958	525	NULL	Translationally-controlled tumor protein 	Q4XFJ8	34.3
+HtGene2960	1623	NULL	N-acetylglucosaminyl-phosphatidylinositol 	Q8IJ83	30.7
+HtGene2978	4020	NULL	DNA-directed RNA polymerase OS=Plasmodium 	Q8I5X9	33.7
+HtGene2980	2553	NULL	Abc transporter, putative OS=Plasmodium 	Q4Y3B8	26.5
+HtGene2981	1194	NULL	PP2C OS=Plasmodium yoelii yoelii GN=PY01654 	Q7RP07	32.6
+HtGene2985	1290	NULL	RabGDI protein OS=Plasmodium falciparum 	Q8I501	27.5
+HtGene2986	1539	NULL	XPA binding protein 1, putative OS=Plasmodium 	A5K0B6	29.7
+HtGene2993	741	NULL	Purine nucleoside phosphorylase OS=Plasmodium 	D0VWV7	34.1
+HtGene3000	1569	NULL	Aspartyl aminopeptidase, putative (Fragment) 	Q7RJQ3	31.3
+HtGene3002	1254	NULL	Putative uncharacterized protein OS=Plasmodium 	A5KEC2	21.9
+HtGene3008	1416	NULL	ATPase ASNA1 homolog OS=Plasmodium chabaudi 	Q4XST6	25.8
+HtGene3013	2283	NULL	Glutathione synthetase, putative OS=Plasmodium 	B3KZ70	26.8
+HtGene3014	999	NULL	CDK-activating kinase assembly factor, 	Q8I3Y3	29.8
+HtGene3016	4608	NULL	Histone deactylase, putative OS=Plasmodium 	B3L935	26.5
+HtGene3024	648	NULL	Thioredoxin-related protein, putative 	Q8IDH5	32.1
+HtGene3027	1029	NULL	Mitochondrial import inner membrane translocase 	A5K2A6	32.4
+HtGene3032	2358	NULL	Serine--tRNA ligase, cytoplasmic OS=Plasmodium 	Q8I5P7	27.5
+HtGene3033	2079	NULL	Receptor putative OS=Plasmodium knowlesi 	B3LCF3	24.9
+HtGene3035	2034	NULL	DEAD/DEAH box ATP dependent DNA helicase,putative 	B3L794	27.7
+HtGene3043	1113	NULL	TBC domain protein, putative OS=Plasmodium 	Q8IDL4	31.3
+HtGene3044	1980	NULL	N-glycosylase/dna lyase, putative OS=Plasmodium 	B3L2I9	27.6
+HtGene3051	1896	NULL	Flavoprotein subunit of succinate dehydrogenase 	Q8IJ66	35.2
+HtGene3053	1635	NULL	Phenylalanyl-tRNA synthetase alpha chain, 	Q8I5A1	23.5
+HtGene3066	1437	NULL	RuvB DNA helicase OS=Plasmodium cynomolgi 	K6USV7	32.2
+HtGene3080	1002	NULL	CPW-WPC family protein OS=Plasmodium yoelii 	N0DP28	29.5
+HtGene3084	3444	NULL	ClpB protein, putative OS=Plasmodium falciparum 	Q8IB03	27.9
+HtGene3087	4575	NULL	ATP dependent RNA helicase, putative OS=Plasmodium 	Q4YU20	32.3
+HtGene3089	561	NULL	S-adenosylmethionine-dependent methyltransferase, 	A5K9D6	33.0
+HtGene3093	684	NULL	Proteasome subunit alpha type 2, putative 	B3L7X1	29.4
+HtGene3097	7155	NULL	Acetyl-CoA transporter, putative OS=Plasmodium 	Q8IJ40	32.4
+HtGene3098	1182	NULL	Pfemp3-like protein, putative OS=Plasmodium 	Q4YU17	26.9
+HtGene3099	1488	NULL	Geranylgeranyltransferase, putative OS=Plasmodium 	C6KSM5	27.5
+HtGene3103	1437	NULL	Deoxyhypusine synthase, putative OS=Plasmodium 	B3LAN9	29.1
+HtGene3104	3192	NULL	ATPase, AAA family, putative OS=Plasmodium 	Q7RPB2	28.6
+HtGene3105	1095	NULL	Glycylpeptide N-tetradecanoyltransferase 	Q9U419	30.8
+HtGene3114	5709	NULL	Similar to Plasmodium berghei heat shock 	Q7PDM3	29.4
+HtGene3115	3192	NULL	Gamma-adaptin, putative OS=Plasmodium 	Q4YUA2	28.5
+HtGene3118	1131	NULL	DNA-damage inducible protein (Fragment) 	K6UEM3	29.7
+HtGene3125	612	NULL	Myosin A tail domain interacting protein 	A5K8W6	37.6
+HtGene3132	604	NULL	Delta-aminolevulinic acid dehydratase 	Q9U0R8	24.5
+HtGene3156	990	NULL	Ran-binding protein OS=Plasmodium falciparum 	Q8WT07	32.8
+HtGene3169	2979	NULL	Rhoptry-associated protein 1 (Fragment) 	D7NSW5	28.9
+HtGene3172	2793	NULL	Myb2 protein, putative OS=Plasmodium knowlesi 	B3L299	30.4
+HtGene3182	2826	NULL	Phosphatidylinositol-glycan biosynthesis 	Q8I5R4	20.5
+HtGene3205	5007	NULL	Conserved protein OS=Plasmodium falciparum 	Q8I4Z1	28.2
+HtGene3206	2868	NULL	Glucose inhibited division protein A homologue,putative 	B3LD81	25.6
+HtGene3208	4554	NULL	Putative uncharacterized protein OS=Plasmodium 	A5JZ80	32.9
+HtGene3212	1092	NULL	Ferredoxin NADP reductase OS=Plasmodium 	C6KT68	27.0
+HtGene3214	777	18S	Putative uncharacterized protein OS=Medicago 	G7K0D2	54.3
+HtGene3215	468	28S	Putative uncharacterized protein OS=Daphnia 	E9I737	49.6
+HtGene3216	1380	NULL	Protein disulfide isomerase OS=Plasmodium 	Q2XQR5	33.1
+HtGene3218	6603	NULL	DNA polymerase OS=Plasmodium knowlesi 	B3L2D0	25.3
+HtGene3227	1506	NULL	Eukaryotic translation initiation factor 	K6UM43	30.0
+HtGene3249	1377	NULL	DNA replication licensing factor OS=Plasmodium 	K6UIS8	21.6
+HtGene3259	2811	NULL	Uncharacterized protein OS=Plasmodium 	Q7RCA2	29.1
+HtGene3262	3288	NULL	Phosphatidylinositol 3-and 4-kinase, putative 	B3L484	28.0
+HtGene3264	951	NULL	Sequestrin, putative (Fragment) OS=Plasmodium 	Q4YNY0	32.9
+HtGene3270	4587	NULL	Serine/Threonine protein kinase, FIKK 	C0H4R8	32.0
+HtGene3273	5598	NULL	Phosphatidylinositol 3-kinase, putative 	Q8I3V5	26.5
+HtGene3275	2235	NULL	GTP-binding protein, putative (Fragment) 	Q4XYH3	31.0
+HtGene3280	2487	NULL	ROI kinase-like protein, putative OS=Plasmodium 	B3L1M7	31.4
+HtGene3285	3951	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Y7N7	27.1
+HtGene3292	5235	NULL	Neutral-sphingomyelinase activation factor 	Q8IIC2	23.2
+HtGene3299	2016	NULL	Exosome complex exonuclease, putative 	A5K2Q0	29.2
+HtGene3300	2316	NULL	Aldo-keto reductase, putative OS=Plasmodium 	Q8ID61	31.4
+HtGene3301	498	NULL	DNA-directed RNA polymerase II 23 kDa 	K6VD48	30.9
+HtGene3302	8073	NULL	DNA polymerase epsilon, catalytic subunit 	C6KTD8	25.1
+HtGene3305	1374	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Z259	28.3
+HtGene3325	447	NULL	60S ribosomal protein L27a, putative OS=Plasmodium 	B3L7M5	36.7
+HtGene3326	4578	NULL	DNA topoisomerase 2 OS=Plasmodium falciparum 	Q8ILC8	32.2
+HtGene3331	822	NULL	Proteasome subunit beta type OS=Plasmodium 	Q7RRC5	32.0
+HtGene3332	1518	NULL	Tubulin gamma chain OS=Plasmodium chabaudi 	Q4XZL6	29.3
+HtGene3336	9349	NULL	Ubiquitin carboxyl-terminal hydrolase 	K6UPQ5	33.9
+HtGene3342	3147	NULL	DNA GyrAse a-subunit OS=Plasmodium cynomolgi 	K6VI82	27.6
+HtGene3346	3420	NULL	TBC domain containing protein OS=Plasmodium 	K6UJ68	26.5
+HtGene3358	2991	NULL	PP-loop family protein, putative OS=Plasmodium 	C6KSW9	27.7
+HtGene3375	813	NULL	Adenylate kinase 1 OS=Plasmodium falciparum 	Q964H2	25.1
+HtGene3379	1371	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Y1V4	34.9
+HtGene3380	1284	NULL	Transcription initiation factor TFIIB, 	Q4YT43	30.4
+HtGene3396	3750	NULL	MAC/Perforin domain containing protein 	A5K5Q7	25.8
+HtGene3400	768	NULL	CPW-WPC family protein OS=Plasmodium falciparum 	C6KTD5	34.4
+HtGene3405	1575	NULL	Uncharacterized protein OS=Plasmodium 	K6UXT0	28.3
+HtGene3408	618	NULL	60S ribosomal protein L6, putative OS=Plasmodium 	Q8IE85	27.8
+HtGene3415	639	NULL	Cytidine and deoxycytidylate deaminase, 	Q8IDK5	25.0
+HtGene3416	2076	NULL	Asparagine-rich protein, putative OS=Plasmodium 	Q7RAT7	30.8
+HtGene3430	6042	NULL	Erythrocyte membrane-associated antigen,putative 	B3KYX9	33.9
+HtGene3433	573	NULL	40S ribosomal protein S8 (Fragment) OS=Cavia 	H0UUK1	31.9
+HtGene3438	2277	NULL	Protein kinase, putative (Fragment) OS=Plasmodium 	B3L522	26.0
+HtGene3440	3510	NULL	Splicing factor, putative OS=Plasmodium 	Q4YZD5	34.2
+HtGene3443	780	NULL	Cdk105, putative OS=Plasmodium falciparum 	Q8IC10	28.6
+HtGene3449	522	NULL	Histidine triad protein, putative OS=Plasmodium 	Q8IL97	26.4
+HtGene3450	1716	NULL	Putative uncharacterized protein OS=Plasmodium 	B3LBC4	28.4
+HtGene3462	4146	NULL	DNA repair exonuclease, putative (Fragment) 	Q4XTN8	25.2
+HtGene3465	2490	NULL	Cell differentiation protein rcd1, putative 	B3L6J3	32.1
+HtGene3466	1593	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4XQ49	29.4
+HtGene3475	429	NULL	DIM1 protein homolog OS=Plasmodium cynomolgi 	K6UN42	30.5
+HtGene3484	1878	NULL	Merozoite surface protein 8 (Fragment) 	I3ZQU9	30.3
+HtGene3498	1518	NULL	Proteasome regulatory component, putative 	B3L8L1	27.6
+HtGene3499	714	NULL	60S ribosomal protein L6, putative OS=Plasmodium 	A5K826	26.3
+HtGene3501	1218	NULL	Elongation factor 1-gamma, putative OS=Plasmodium 	A5K827	28.5
+HtGene3504	570	NULL	40S ribosomal protein S7, putative OS=Plasmodium 	Q8IET7	29.6
+HtGene3506	4188	NULL	Putative uncharacterized protein (Fragment) 	Q4XWT7	25.7
+HtGene3510	7755	NULL	RNA-helicase, putative OS=Plasmodium knowlesi 	B3LA26	29.4
+HtGene3512	3702	NULL	WD-repeat protein, putative OS=Plasmodium 	Q8IAM3	29.9
+HtGene3517	1263	NULL	26S proteasome ATPase subunit OS=Plasmodium 	K6VHD7	35.7
+HtGene3518	1365	NULL	Clathrin-adaptor medium chain, putative 	B3LBS6	28.4
+HtGene3520	768	NULL	Translation initiation factor E4, putative 	O97266	28.9
+HtGene3523	5559	NULL	Cysteine repeat modular protein 2, putative 	Q8IBR8	30.0
+HtGene3541	408	NULL	V-type proton ATPase subunit F OS=Plasmodium 	Q8IHW4	33.6
+HtGene3543	2811	NULL	Replication licensing factor, putative 	Q8IDF0	32.6
+HtGene3548	1461	NULL	CAMP-dependent protein kinase regulatory 	B3LCL9	32.1
+HtGene3558	1338	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8ILD7	25.8
+HtGene3560	5475	NULL	Uncharacterized protein OS=Plasmodium 	K6UCS3	29.5
+HtGene3571	8406	NULL	Diaphanous homolog, putative OS=Plasmodium 	B3L5V3	27.5
+HtGene3586	1035	NULL	RNA helicase, putative (Fragment) OS=Plasmodium 	Q4XZC2	27.5
+HtGene3587	5274	NULL	Endonuclease/exonuclease/phosphatase domain 	K6UCY0	24.6
+HtGene3589	2757	NULL	Kinesin-like protein, putative OS=Plasmodium 	C0H4S3	32.5
+HtGene3602	1155	NULL	Vacuolar ATP synthase subunit C, putative 	A5K9V3	25.6
+HtGene3603	2881	NULL	Helicase, putative OS=Plasmodium knowlesi 	B3L2D7	25.8
+HtGene3604	2229	NULL	Dynamin homologue OS=Plasmodium falciparum 	Q6KF55	29.7
+HtGene3609	2725	NULL	Translation elongation factor G OS=Plasmodium 	Q7RFK0	28.6
+HtGene3610	7200	NULL	DEAD/DEAH box helicase, putative OS=Plasmodium 	Q8I3B4	28.1
+HtGene3623	2049	NULL	Fumarate hydratase OS=Plasmodium gallinaceum 	I2FKD0	30.3
+HtGene3631	1110	NULL	Putative uncharacterized protein OS=Plasmodium 	A5KDY5	33.7
+HtGene3634	1569	NULL	Ser/Arg-rich splicing factor, putative 	Q4XFX6	36.6
+HtGene3638	1767	NULL	Methyltransferase, putative OS=Plasmodium 	B3L5A2	25.1
+HtGene3642	1122	NULL	DNAJ domain protein, putative OS=Plasmodium 	C6KTC7	31.2
+HtGene3654	1455	NULL	Metacaspase 1 OS=Plasmodium vivax PE=4 	G0ZIA6	32.1
+HtGene3655	3693	NULL	Eukaryotic translation initiation factor 	Q4XVN2	34.5
+HtGene3669	2289	NULL	Calcium-dependent protein kinase, putative 	Q8IDV5	28.2
+HtGene3675	2991	NULL	D13 OS=Plasmodium falciparum GN=D13 PE=4 	Q867W4	25.8
+HtGene3684	1167	Unique1736	null	null	36.8
+HtGene3695	903	NULL	Steroid dehydrogenase, putative OS=Plasmodium 	C0H4B9	27.4
+HtGene3699	4827	NULL	GTP-binding protein, putative OS=Plasmodium 	Q4XUS8	27.3
+HtGene3702	2970	NULL	RNA binding protein, putative OS=Plasmodium 	Q4Y0V6	34.6
+HtGene3704	1287	NULL	Maf-like protein, putative OS=Plasmodium 	Q8I386	25.5
+HtGene3709	1008	NULL	40S ribosomal protein S15A, putative OS=Plasmodium 	B3L443	33.8
+HtGene3710	1092	NULL	PfMPC OS=Plasmodium yoelii yoelii GN=PY00463 	Q7RS99	31.4
+HtGene3715	3363	NULL	Putative erythrocyte binding protein MAEBL 	Q8T7Y1	34.1
+HtGene3726	798	NULL	Putative uncharacterized protein (Fragment) 	Q4YMU6	25.3
+HtGene3738	4242	NULL	DEAD-box subfamily ATP-dependant helicase,putative 	B3L646	24.5
+HtGene3741	1077	NULL	Transcription initiation factor TFiid, 	A5KAY9	29.2
+HtGene3742	609	NULL	60S ribosomal subunit protein L24, putative 	B3L6K9	26.3
+HtGene3752	3336	NULL	Ubiquitin-activating enzyme E1, putative 	Q8I5F9	31.3
+HtGene3757	570	NULL	Conserved protein OS=Plasmodium falciparum 	Q8II87	26.7
+HtGene3763	4137	NULL	Iron-sulfur assembly protein, sufD, putative 	Q8IIW9	24.2
+HtGene3772	6057	NULL	Asparagine/aspartate rich protein, putative 	Q8I586	32.0
+HtGene3779	2187	NULL	Serine/threonine-protein kinase prp4 homolog 	Q7RKH5	31.6
+HtGene3784	3654	NULL	Helicase, putative (Fragment) OS=Plasmodium 	Q4Y133	24.5
+HtGene3797	6168	NULL	ATP-dependant helicase, putative (Fragment) 	Q4YZW8	29.6
+HtGene3820	4482	NULL	Insulinase, putative OS=Plasmodium yoelii 	Q7RGW4	29.1
+HtGene3822	2109	NULL	Transporter, putative OS=Plasmodium berghei 	Q4Z331	25.7
+HtGene3843	4071	NULL	Patched family protein, putative OS=Plasmodium 	B3KZK0	29.0
+HtGene3845	2049	NULL	Conserved hypothetical malaria antigen 	Q4Y1C6	28.9
+HtGene3855	3222	NULL	2-oxoglutarate dehydrogenase e1 component, 	I2FKD2	31.9
+HtGene3864	492	NULL	40S ribosomal protein S9, putative OS=Plasmodium 	Q8I3R0	32.1
+HtGene3868	1812	NULL	tRNA (guanine(37)-N1)-methyltransferase 	B3L2G0	26.8
+HtGene3874	1152	NULL	Eukaryotic translation initiation factor 	Q8IBT2	29.3
+HtGene3877	2019	NULL	Eukaryotic translation initiation factor 	A5K1W2	28.3
+HtGene3892	1212	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K3X2	32.3
+HtGene3893	2964	NULL	Heat shock protein, putative OS=Plasmodium 	B3L9X8	30.2
+HtGene3894	2124	NULL	Conserved Plasmodium membrane protein 	Q8II12	25.6
+HtGene3900	984	NULL	SNARE protein OS=Plasmodium falciparum 	Q0ZAF1	24.8
+HtGene3909	1845	NULL	Uncharacterized protein OS=Plasmodium 	Q7RM44	30.0
+HtGene3911	1275	NULL	DNA-directed RNA polymerase I (Fragment) 	K6UWE9	27.2
+HtGene3920	2151	NULL	Eukaryotic translation initiation factor 	Q8I3T1	29.9
+HtGene3926	5004	NULL	ATP-dependent phosphofructokinase, putative 	Q8II80	27.0
+HtGene3930	3324	NULL	10b antigen, putative (Fragment) OS=Plasmodium 	Q4XQH2	27.5
+HtGene3937	1623	NULL	Wd-40 repeat protein msi1 OS=Plasmodium 	Q7RQQ0	27.6
+HtGene3948	1752	NULL	Glycerol-3-phosphate acyltransferase OS=Plasmodium 	Q9BHA5	30.1
+HtGene3961	2787	NULL	Hepatocellular carcinoma-associated antigen 	Q4YWW2	29.4
+HtGene3962	831	NULL	Proteasome activator complex subunit 3, 	A5K6E7	28.8
+HtGene3968	3921	NULL	Cell division cycle ATPase, putative OS=Plasmodium 	Q4YQQ6	26.2
+HtGene3974	1296	NULL	Conserved protein OS=Plasmodium falciparum 	Q8IIV8	27.8
+HtGene3983	588	NULL	Endoplasmic reticulum oxidoreductin, putative 	Q8IIC3	26.5
+HtGene3996	3126	NULL	Cysteine-rich surface protein (Fragment) 	C5HDX5	29.2
+HtGene3998	1188	NULL	Preprocathepsin c, putative OS=Plasmodium 	Q8I0V1	27.7
+HtGene3999	594	NULL	Probable U3 small nucleolar RNA-associated 	Q8I4V5	27.4
+HtGene4004	1707	NULL	CGMP-dependent protein kinase OS=Plasmodium 	Q8MMZ4	28.5
+HtGene4007	3957	NULL	RNA helicase , putative OS=Plasmodium 	Q4Z0G0	26.3
+HtGene4011	3867	NULL	Acid phosphatase OS=Plasmodium cynomolgi 	K6V082	28.1
+HtGene4012	2043	NULL	Polyprenyl synthetase, putative OS=Plasmodium 	Q7RSB5	24.7
+HtGene4029	3684	NULL	Moving junction protein OS=Plasmodium 	Q8IIK5	35.9
+HtGene4031	2904	NULL	GcpE protein, putative OS=Plasmodium berghei 	Q4YU72	26.2
+HtGene4032	6282	NULL	von Willebrand factor type A OS=Shewanella 	F8B742	33.1
+HtGene4036	1623	NULL	ATP synthase subunit beta OS=Plasmodium 	I2FKD9	35.7
+HtGene4037	1050	NULL	Translation initiation factor EIF-2B gamma 	C0H5D7	26.9
+HtGene4057	4185	NULL	Ion channel, putative OS=Plasmodium falciparum 	Q8IKI3	26.3
+HtGene4058	816	NULL	Centrin OS=Plasmodium cynomolgi strain 	K6UT64	33.2
+HtGene4062	1881	NULL	Filament assembling protein, putative 	Q8IAN2	23.2
+HtGene4074	489	NULL	Ribosomal protein L21e, putative OS=Plasmodium 	Q7REC3	32.3
+HtGene4078	3723	NULL	Structural maintenance of chromosomes protein 	Q8I1U7	26.0
+HtGene4080	426	Unique9	null	null	34.0
+HtGene4081	711	Unique9	null	null	28.6
+HtGene4083	5016	NULL	Structural maintenance of chromosomes 	A5KB20	28.6
+HtGene4101	948	NULL	Rhoptry-associated protein 3 (Fragment) 	C5HEW9	26.4
+HtGene4106	2424	NULL	RNA helicase, putative OS=Plasmodium falciparum 	Q8IJA4	28.2
+HtGene4119	1092	NULL	Serine/threonine-protein phosphatase OS=Plasmodium 	K6UD23	28.8
+HtGene4121	951	NULL	Heat shock protein, putative OS=Plasmodium 	A5KBZ1	32.2
+HtGene4125	1239	NULL	Arginine n-methyltransferase, putative 	B3LAC9	32.4
+HtGene4130	1032	NULL	N-acetyltransferase, putative OS=Plasmodium 	A5K2C1	23.5
+HtGene4136	735	CTRP	CTRP adhesive protein (Invasive stage), 	A5K7S5	33.2
+HtGene4137	4494	CTRP	Circumsporozoite protein/thrombospondin-related 	Q0WYJ9	35.0
+HtGene4139	2652	NULL	Cdc-2 related kinase 3 OS=Plasmodium yoelii 	Q7RHG1	31.6
+HtGene4158	1776	NULL	Holo-(Acyl-carrier protein) synthase, 	Q4Y9L2	29.6
+HtGene4159	1731	NULL	Histone acetyltransferase, putative OS=Plasmodium 	Q8III2	29.4
+HtGene4160	2016	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4YB52	28.8
+HtGene4175	3627	NULL	Asparagine-rich antigen OS=Plasmodium 	K6UEU5	26.5
+HtGene4178	3735	NULL	ERYTHROCYTE MEMBRANE PROTEIN PFEMP3 OS=Plasmodium 	Q7PDP6	26.8
+HtGene4182	846	NULL	Mitochondrial cardiolipin synthase, PfCLS 	C6KSU1	21.3
+HtGene4190	648	NULL	Hypoxanthine phosphoribosyltransferase 	K6UD65	35.6
+HtGene4198	756	NULL	Putative uncharacterized protein OS=Plasmodium 	C6KTC1	23.3
+HtGene4204	3951	NULL	Conserved Plasmodium protein OS=Plasmodium 	Q8I4Y9	23.7
+HtGene4231	549	NULL	Translation initiation factor eIF-1A, 	Q8IHT2	33.3
+HtGene4234	1842	NULL	Asparagine-tRNA ligase, putative OS=Plasmodium 	A5KC04	30.2
+HtGene4241	1599	NULL	Uncharacterized protein OS=Plasmodium 	K6UPP6	26.0
+HtGene4242	1416	NULL	4-hydroxy-3-methylbut-2-enyl diphosphate 	Q4Y2K8	27.5
+HtGene4258	3642	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Z2X8	23.9
+HtGene4261	1047	NULL	Developmentally regulated GTP-binding 	A5K9B5	28.5
+HtGene4266	1194	NULL	Uroporphyrinogen decarboxylase OS=Plasmodium 	C6KSS1	23.5
+HtGene4277	3483	NULL	Lipase, putative OS=Plasmodium falciparum 	Q8ILJ3	26.7
+HtGene4280	966	NULL	Glycerol-3-phosphate dehydrogenase OS=Plasmodium 	K6UMY6	26.5
+HtGene4283	2457	NULL	T-cell immunomodulatory protein homolog OS=Plasmodium 	Q8I3H7	27.1
+HtGene4290	1548	NULL	Endonuclease III homologue, putative OS=Plasmodium 	C6KSY9	24.7
+HtGene4292	3291	NULL	DNA polymerase OS=Plasmodium falciparum 	Q7KQL4	29.0
+HtGene4302	4344	NULL	Chloroquine resistance marker protein 	Q968T7	24.1
+HtGene4304	1434	NULL	Adenosylhomocysteinase OS=Plasmodium knowlesi 	B3L654	31.2
+HtGene4305	5049	NULL	Ferlin OS=Plasmodium cynomolgi strain 	K6V5V1	28.2
+HtGene4307	1497	NULL	26S proteasome regulatory subunit 4 OS=Plasmodium 	K6UD56	34.7
+HtGene4315	5034	NULL	Ser/Thr protein kinase, putative (Fragment) 	Q4Y3L5	25.2
+HtGene4329	3090	NULL	Asparagine--tRNA ligase, putative OS=Plasmodium 	B3L6C2	24.2
+HtGene4338	1365	NULL	Phosphoinositide-binding protein, putative 	Q8IBP4	20.0
+HtGene4349	1224	NULL	Deoxyhypusine hydroxylase OS=Plasmodium 	Q8I701	28.2
+HtGene4350	1224	NULL	Lipoate-protein ligase, putative OS=Plasmodium 	A5JZD5	24.8
+HtGene4354	2679	NULL	Exoribonuclease, putative OS=Plasmodium 	Q8IDV9	25.9
+HtGene4359	4668	NULL	MORN repeat protein, putative OS=Plasmodium 	Q8I3Z3	23.7
+HtGene4364	1008	NULL	DNA-directed RNA polymerase 2, putative 	Q8I241	31.8
+HtGene4379	2175	NULL	SEL-1 protein, putative OS=Plasmodium 	Q8IKY9	26.5
+HtGene4381	573	NULL	Sporozoite asparagine-rich protein OS=Plasmodium 	Q8IHP9	30.4
+HtGene4390	3706	NULL	Cloroquine resistance associated protein 	A5KA97	25.2
+HtGene4400	807	NULL	Nucleolar protein Nop52, putative OS=Plasmodium 	Q8I2K4	21.7
+HtGene4412	540	NULL	Ubiquitin conjugating enzyme E2, putative 	O97241	30.7
+HtGene4418	885	NULL	RNA-binding protein, putative OS=Plasmodium 	B3L0S1	25.8
+HtGene4420	1713	NULL	tRNA-dihydrouridine synthase A (Fragment) 	K6UD05	29.7
+HtGene4449	3735	NULL	Cg7 protein, putative OS=Plasmodium knowlesi 	B3KZ39	27.3
+HtGene4451	708	NULL	Ribosomal protein L15 OS=Plasmodium cynomolgi 	K6V807	33.2
+HtGene4452	1566	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Y2D5	28.1
+HtGene4476	2313	NULL	tRNA nucleotidyltransferase, putative 	B3L508	24.0
+HtGene4497	897	NULL	P1 nuclease, putative OS=Plasmodium falciparum 	C0H524	28.5
+HtGene4502	1915	NULL	ATP-dependent RNA Helicase, putative OS=Plasmodium 	Q8I416	29.7
+HtGene4506	1659	NULL	RNA lariat debranching enzyme, putative 	B3L8J0	27.5
+HtGene4510	2064	NULL	Splicing factor OS=Plasmodium cynomolgi 	K6VEV2	32.7
+HtGene4513	3072	NULL	Multidrug resistance protein 2, putative 	B3L9T8	27.2
+HtGene4516	1947	NULL	Coronin (Fragment) OS=Plasmodium chabaudi 	Q4XZT7	26.8
+HtGene4522	2121	NULL	CGI-201 protein, short form, putative 	Q4XLH2	25.1
+HtGene4537	597	NULL	Aspartate carbamoyltransferase, putative 	Q4Y1K5	27.5
+HtGene4539	2052	NULL	Zinc finger protein, putative OS=Plasmodium 	Q4YTI4	25.7
+HtGene4549	1821	NULL	Drosophila melanogaster BcDNA.GH02833 	Q7RFI2	21.8
+HtGene4560	1251	NULL	ATP-dependent RNA helicase, putative OS=Plasmodium 	B3LAI7	23.9
+HtGene4561	1902	NULL	ATP-dependent RNA Helicase, putative OS=Plasmodium 	Q8ILQ9	22.7
+HtGene4571	738	NULL	Conserved Plasmodium membrane protein 	Q8I5Q7	30.6
+HtGene4572	639	NULL	Thioredoxin peroxidase, putative OS=Plasmodium 	Q4Y8C8	28.5
+HtGene4573	1632	NULL	Malate:quinone oxidoreductase, putative 	C6KT09	32.0
+HtGene4575	2880	NULL	RNA recognition motif, putative OS=Plasmodium 	Q8I3V8	33.4
+HtGene4576	3408	NULL	Snrnp protein, putative OS=Plasmodium 	Q8I0W7	30.4
+HtGene4581	1188	NULL	Protein phosphatases PP1 regulatory subunit 	A5KDW9	25.0
+HtGene4582	912	NULL	Protein phosphatase-1 regulatory subunit 	Q7RLE6	18.9
+HtGene4595	1245	NULL	tRNA-dihydrouridine synthase OS=Plasmodium 	A5K1E0	22.9
+HtGene4603	1473	NULL	Monocarboxylate transporter, putative 	C0H564	24.0
+HtGene4607	2175	NULL	Exported serine/threonine protein kinase, 	Q4YTU8	23.7
+HtGene4614	1812	NULL	Farnesyltransferase beta subunit, putative 	Q4Y943	24.6
+HtGene4615	3525	NULL	Structural maintenance of chromosomes protein 	Q8IED2	27.7
+HtGene4619	2172	NULL	Putative uncharacterized protein (Fragment) 	Q4XAC4	29.8
+HtGene4622	1275	NULL	Phospholipid or glycerol acyltransferase, 	Q8I310	29.5
+HtGene4639	1041	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4XUG1	24.4
+HtGene4646	2427	NULL	Protein phosphatase 2C (Fragment) OS=Plasmodium 	K6UWB7	35.6
+HtGene4653	2181	NULL	Phospholipase DDHD1, putative OS=Plasmodium 	A5JZN5	24.6
+HtGene4659	2145	NULL	Phosphatidate cytidylyltransferase OS=Plasmodium 	Q9NIH5	27.5
+HtGene4668	1605	NULL	Syntaxin binding protein, putative OS=Plasmodium 	C6KSX9	22.6
+HtGene4675	1245	NULL	Asparagine synthase (Fragment) OS=Plasmodium 	K6VEX4	25.0
+HtGene4676	2721	NULL	Extragenic suppressor of the bimD6 mutation-related 	Q7RP87	25.3
+HtGene4693	2622	NULL	Sequestrin, putative (Fragment) OS=Plasmodium 	Q4YNY0	33.5
+HtGene4694	2790	NULL	Heat shock protein 90, putative OS=Plasmodium 	Q4X2E7	26.4
+HtGene4704	1707	NULL	Vacuolar protein sorting-associated protein 	A5KBW0	24.7
+HtGene4718	1299	NULL	5'-3' exonuclease, N-terminal resolvase,putative 	B3L0W4	23.2
+HtGene4720	1635	NULL	Diacylglycerol kinase, putative OS=Plasmodium 	A5K344	26.8
+HtGene4724	2952	NULL	Notchless-related OS=Plasmodium yoelii 	Q7RLE7	34.4
+HtGene4759	441	NULL	Multiprotein bridging factor type 1, putative 	Q8II81	30.6
+HtGene4768	2967	NULL	Kinesin motor domain containing protein 	B3LD98	22.8
+HtGene4769	2838	NULL	Transcription factor Tfb2, putative OS=Plasmodium 	Q8I4Y8	26.5
+HtGene4785	774	NULL	Dolichyl-phosphate b-D-mannosyltransferase, 	A5K574	26.4
+HtGene4794	1665	NULL	GTPase activator, putative OS=Plasmodium 	Q8IAP4	27.9
+HtGene4796	381	NULL	60S ribosomal protein L19, putative OS=Plasmodium 	A5K1Y3	31.2
+HtGene4813	2082	NULL	F-box domain, putative OS=Plasmodium yoelii 	Q7RB33	28.1
+HtGene4835	2076	NULL	Phenylalanyl-tRNA synthetase beta chain, 	Q8I246	23.7
+HtGene4838	825	NULL	Proteasome subunit beta type OS=Plasmodium 	Q4YZX3	31.4
+HtGene4863	738	NULL	Serine/threonine protein kinase OS=Plasmodium 	K6UE01	27.1
+HtGene4883	729	NULL	Eukaryotic translation initiation factor 	Q8IAZ3	28.9
+HtGene4891	2535	NULL	Cactin gene product OS=Plasmodium yoelii 	Q7RRC6	31.0
+HtGene4901	993	NULL	Ferrochelatase OS=Plasmodium falciparum 	Q8IFR0	29.7
+HtGene4913	1758	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4XEJ4	24.3
+HtGene4916	930	NULL	Proteasome, putative OS=Plasmodium chabaudi 	Q4Y495	25.8
+HtGene4927	982	NULL	Protein kinase, putative OS=Plasmodium 	B3L5T1	24.9
+HtGene4938	1405	NULL	Eukaryotic DNA topoisomerase I, DNA binding, 	Q7RE42	29.8
+HtGene4957	1923	NULL	MAC/perforin, putative OS=Plasmodium knowlesi 	B3L199	27.8
+HtGene4968	804	NULL	Adenylate kinase, putative OS=Plasmodium 	A5KEC3	24.5
+HtGene4971	753	NULL	2,3-bisphosphoglycerate-dependent phosphoglycerate 	A5K4L4	34.3
+HtGene4979	2316	NULL	Translation initiation factor IF-2, putative 	B3L7Y7	29.7
+HtGene4981	1086	NULL	Ubiquitin activating enzyme, putative 	B3LD25	22.5
+HtGene4987	1524	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8IKG2	24.3
+HtGene5009	1089	NULL	U5 snrnp-specific protein, putative OS=Plasmodium 	C0H4X1	27.7
+HtGene5014	1512	NULL	Drosophila melanogaster CG1109 gene product 	Q7RMG0	27.1
+HtGene5046	1461	NULL	Zinc finger protein OS=Plasmodium cynomolgi 	K6VA78	23.1
+HtGene5058	894	NULL	Transcription initiation TFIID-like, putative 	Q8ILH6	27.4
+HtGene5066	993	NULL	Chromatin assembly protein (ASF1), putative 	A5K045	26.8
+HtGene5073	1806	NULL	Phenylalanine--trna ligase, putative OS=Plasmodium 	B3L4J2	20.5
+HtGene5082	2298	NULL	ATP-dependent RNA Helicase (Fragment) 	K6UD77	25.3
+HtGene5104	1200	NULL	Cytidine and deoxycytidylate deaminase 	Q4YPL2	28.2
+HtGene5115	786	NULL	ATP synthase subunit gamma OS=Plasmodium 	B3LBS5	27.0
+HtGene5124	1842	NULL	Putative uncharacterized protein OS=Plasmodium 	Q8IAL3	25.5
+HtGene5149	1428	NULL	G-protein coupled receptor, putative OS=Plasmodium 	Q8I3L1	25.3
+HtGene5152	513	NULL	Putative Rab7 GTPase OS=Plasmodium falciparum 	Q9NFG0	34.1
+HtGene5156	357	NULL	60S ribosomal protein L31, putative OS=Plasmodium 	Q8I463	30.3
+HtGene5166	1116	NULL	26S proteasome regulatory complex subunit, 	A5K4V3	30.7
+HtGene5182	2245	NULL	Pyruvate kinase OS=Plasmodium vivax (strain 	A5KDT6	21.8
+HtGene5186	735	NULL	Uncharacterized protein OS=Plasmodium 	Q7RNU9	28.0
+HtGene5199	573	NULL	Signal peptidase, putative OS=Plasmodium 	Q8I3A5	25.8
+HtGene5201	1200	NULL	Conserved Plasmodium protein OS=Plasmodium 	Q8I5V5	26.0
+HtGene5232	897	NULL	Peptidyl-prolyl cis-trans isomerase OS=Plasmodium 	Q7RSH5	27.2
+HtGene5259	1290	NULL	Cyclophilin (Fragment) OS=Plasmodium cynomolgi 	K6UUA0	23.0
+HtGene5262	1284	NULL	Topoisomerase I OS=Plasmodium falciparum 	Q8I3Z9	27.2
+HtGene5267	1950	NULL	Glutamate dehydrogenase-related OS=Plasmodium 	Q7RIC4	22.0
+HtGene5273	906	NULL	F-actin capping protein beta subunit, 	B3L692	22.6
+HtGene5293	1320	NULL	Cdk7, putative OS=Plasmodium knowlesi 	B3L3T7	28.3
+HtGene5306	1191	NULL	Transmission-blocking target antigen Pfs230 	D3YHT1	24.0
+HtGene5312	1344	NULL	Thioredoxin-like protein OS=Plasmodium 	Q8IBS1	28.4
+HtGene5328	420	NULL	60S ribosomal protein L23 OS=Plasmodium 	Q7R814	37.9
+HtGene5334	1831	NULL	Protein kinase domain containing protein 	A5K4M5	25.1
+HtGene5366	528	NULL	Camp-dependent protein kinase catalytic 	B3L322	30.1
+HtGene5382	432	NULL	Putative uncharacterized protein OS=Plasmodium 	A5K7J2	23.1
+HtGene5408	1059	NULL	Triose phosphate transporter OS=Plasmodium 	Q8I420	24.7
+HtGene5420	345	NULL	Rab2 gtpase, putative OS=Plasmodium knowlesi 	B3LCV2	32.8
+HtGene5427	1413	NULL	Replication factor A-related protein OS=Plasmodium 	K6URB9	26.7
+HtGene5474	1656	NULL	Autoantigen ngp-1 OS=Plasmodium yoelii 	Q7RTH4	27.9
+HtGene5477	1236	NULL	Methyltransferase, putative OS=Plasmodium 	Q8IJC4	22.6
+HtGene5510	1242	NULL	Conserved protein OS=Plasmodium falciparum 	Q8IJY7	22.3
+HtGene5546	1446	NULL	Stearoyl-CoA desaturase (Acyl-CoA desaturase, 	A5K9P4	26.3
+HtGene5563	1062	NULL	Myo-inositol 1-phosphate synthase, putative 	Q8I3Y8	24.6
+HtGene5567	520	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Z0U5	27.3
+HtGene5642	1359	NULL	Putative uncharacterized protein OS=Plasmodium 	B3L1L3	26.5
+HtGene5689	675	NULL	Signal peptidase, putative OS=Plasmodium 	Q4XV54	25.9
+HtGene5720	690	NULL	Phosphoinositide-binding protein, putative 	Q8IBP4	22.8
+HtGene5732	1314	NULL	Phosphatidylinositol 3-and 4-kinase, putative 	A5K647	22.6
+HtGene5738	729	NULL	Cytochrome c oxidase assembly protein 	I2FKD7	26.5
+HtGene5773	342	NULL	Clathrin assembly protein AP19, putative 	Q8III7	31.3
+HtGene5793	642	NULL	Proteasome component C8, putative OS=Plasmodium 	O77396	29.4
+HtGene5837	856	NULL	Protein kinase, putative OS=Plasmodium 	Q4XQ94	26.5
+HtGene5866	909	NULL	Adenine nucleotide translocase OS=Plasmodium 	Q25692	31.4
+HtGene5888	384	NULL	Putative uncharacterized protein OS=Plasmodium 	Q4Z4J5	28.6
+HtGene5901	1113	NULL	10b antigen, putative OS=Plasmodium falciparum 	Q8IJI4	33.6
+HtGene5905	486	NULL	Translation initiation factor eIF-5A OS=Plasmodium 	Q7RQV7	35.0
+HtGene5932	555	NULL	Ubiquitin conjugating enzyme, putative 	Q8IDP1	24.6
+HtGene5975	1047	NULL	PF16 protein, putative OS=Plasmodium berghei 	Q4YZW4	22.7
+HtGene6076	1096	NULL	AAA family ATPase, putative OS=Plasmodium 	Q9U0K7	25.0
+HtGene6094	1104	NULL	Vesicle fusion and protein sorting subunit 	Q8I524	24.5
+HtGene6101	792	NULL	Vesicle transport protein, putative OS=Plasmodium 	B3L325	20.8
+HtGene6130	588	NULL	N-acetyltransferase, putative OS=Plasmodium 	Q4Y7X1	24.7
+HtGene6136	489	NULL	SNAP protein (Soluble N-ethylmaleimide-sensitive 	Q4XM07	33.1
+HtGene6156	993	NULL	Replication factor C, subunit 2, putative 	B3L0H3	28.2
+HtGene6213	666	NULL	Proteasome subunit beta type OS=Plasmodium 	C0H4E8	26.8
+HtGene6226	820	NULL	Cyclophilin, putative OS=Plasmodium falciparum 	Q8ILM0	21.8
+HtGene6386	675	WARP	Circumsporozoite protein/thrombospondin-related 	Q0WYJ9	35.7
