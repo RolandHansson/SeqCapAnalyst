@@ -9,8 +9,8 @@ MINARGS=1
 # Picard (Calls on "java -jar bin/picard.jar")
 # Bowtie2 (Calls on "bowtie2", "bowtie2-build")
 # Trimmomatic (calls "java -jar ~/bin/trimmomatic-0.36.jar") <-- Will need fix
-# SAMtools (calls on "samtools")
-# bcftools
+# SAMtools (calls on "samtools1.7")
+# bcftools (calls on "bcftools1.6") 
 # vcftools
 # bedtools
 # vcfutils.pl (usually included in above)
@@ -118,7 +118,8 @@ function mark_depth ()
 j=-1
 length1=`echo $1 | tr -d "\n" | wc -c`
 length2=`echo $2 | tr -d "\n" | wc -c`
-if [ $length1 -gt $length2 ] 
+
+if [ ! $length1 -eq $length2 ] 
 then 
   echo -e >&2 "Code string and read_nr string not equally long!\n '$1'($length1)\n'$2'($length2)"
   exit 0
@@ -212,7 +213,7 @@ function subsample_bam () #Note: will add 'R' or 'F' to read-names in resulting 
     #Otherwise, load [min_reads] more files, if available, and add until [min_reads] is reached. (Note: some may have been added previously) 
     #echo "start=$start, end=$end, i='$i', difference=$difference"
     [[ VERBOSE -eq 1 ]] && >&2 echo "searching for '$samfile' '${scaffold}:${i}-$end'"
-    list=`samtools view "$samfile" "${scaffold}:${i}-$end" | return_unless_DNA_match "$MIN_LENGTH_TO_DISCARD" | head -n $[ 5 + READ_MINIMUM * 2 ]`
+    list=`samtools1.7 view "$samfile" "${scaffold}:${i}-$end" | return_unless_DNA_match "$MIN_LENGTH_TO_DISCARD" | head -n $[ 5 + READ_MINIMUM * 2 ]`
     [[ VERBOSE -eq 1 ]] && >&2 echo "list=$list"
     OLDIFS=$IFS
     IFS=$'\n'; 
@@ -266,6 +267,11 @@ while read line; do
   echo ">$line" | cut -f1
   echo "$line" | cut -f10
 done
+}
+
+function rev_comp () 
+{
+  echo $1 | tr "ATUGCYRSWKMBDHVNatugcyrswkmbdhvn" "TAACGRYSWMKVHDBNtaacgryswmkvhdbn" | rev
 }
 
 function get_gene_ID_from_exon ()
@@ -341,6 +347,7 @@ CORES=$(($CORES - 1)) #Save one core for other tasks.
 SKIP=1 #Skip steps if resulting files already exist
 KEEP=0 #Keep intermediary files
 DELETE=0 #Delete everything but statistics afterwards
+CALLING=0 #Determine method of variant calling (GATK/VCF). 
 ARGUMENTS=$@
 BASE=""
 PIPELINE="$HOME/bin/SeqCapAnalyst" #folder of pipeline-related files
@@ -391,16 +398,17 @@ do
 #    echo $1
     if [[ $1 =~ ^- ]]
     then
-        getopts :f:s:n:a:b:d:th parameter
+        getopts :f:s:n:a:b:d:g:th parameter
         case $parameter in
             h)  echo "$HELP"
 		exit
                 ;;
-            f)  FOLDER=$OPTARG #Currently only works on single file. 
+            f)  FOLDER=$OPTARG #choose name of output folder
+		#Currently only works on single sample. 
                 echo "FOLDER=$FOLDER"
                 shift
                 ;;
-            a)  ADAPTER=$OPTARG 
+            a)  ADAPTER=$OPTARG #set path to trimmomatic adapter file
                 echo "ADAPTER=$ADAPTER"
                 shift
                 ;;
@@ -408,19 +416,23 @@ do
                 echo "CORES=$CORES"
                 shift
                 ;;            
-	    b)  STRINGENCY=$OPTARG 
+	    b)  STRINGENCY=$OPTARG #Choose Bowtie2 stringency setting (0-6)
                 echo "STRINGENCY=$STRINGENCY"
                 shift
                 ;;
-            s)  SKIP=$OPTARG
+            s)  SKIP=$OPTARG #If SKIP=0, remake *all* files from scratch. 
                 echo "SKIP=$SKIP"
                 shift
                 ;;
-            t)  TEST=1
+            t)  TEST=1 #Test that command-line-option system works properly. 
                 echo "TEST=$TEST"
                 shift
                 ;;
-            d)  DELETE=$OPTARG
+            g)  CALLING=$OPTARG #Choose variant calling method.
+                echo "CALLING=$CALLING"
+                shift
+                ;;
+            d)  DELETE=$OPTARG #Delete result files afterwards, except stats.
                 echo "DELETE=$DELETE"
                 shift
                 ;;
@@ -542,7 +554,7 @@ then
 die_unless $infile
 echo -e "\ngenerating $outfile"
 
-samtools faidx $infile
+samtools1.7 faidx $infile
 
 echo made $outfile
 else
@@ -558,7 +570,7 @@ then
 die_unless $infile
 echo -e "\ngenerating $outfile"
 
-samtools faidx $infile
+samtools1.7 faidx $infile
 
 echo made $outfile
 else
@@ -942,7 +954,7 @@ die_unless $fastq_file
 
 ### Code for this was outsourced to a separate file; it is convenient to be able to call the function on its own. 
 # fastq_file is used to find information for read group assignment.
-# (file name is backup for read_group data; a default name like '512022_S1_L001' contains data on sample name and lane nr .)
+# (file name is backup for read_group data; a default name like '512022_S1_L001' contains data on sample name and lane nr.)
 
 bash $PIPELINE/SAM_to_indexed_BAM.sh $input_file $output_file $fastq_file $FILENAME 
 
@@ -966,7 +978,9 @@ fi
 
 #######################################################################
 ###########################################
-### Variant Calling, genome. 
+### Variant Calling, samtools.
+if [ $CALLING -eq 0 ]
+then
 if [ $SKIP -eq 0 ] || [ ! -f $(echo $FOLDER/${FILENAME}_variants.vcf) ]
 then
 
@@ -977,13 +991,13 @@ die_unless $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam
 
 PILEUP_OPTIONS="-g -f"
 BCF_OPTIONS="-m -v"
-samtools mpileup $PILEUP_OPTIONS $PIPELINE/HtGenome.fasta $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam > $FOLDER/${FILENAME}_variants.bcf
+samtools1.7 mpileup $PILEUP_OPTIONS $PIPELINE/HtGenome.fasta $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam > $FOLDER/${FILENAME}_variants.bcf
 
 die_unless $FOLDER/${FILENAME}_variants.bcf
-bcftools call $BCF_OPTIONS $FOLDER/${FILENAME}_variants.bcf > $FOLDER/${FILENAME}_variants.vcf
+bcftools1.6 call $BCF_OPTIONS $FOLDER/${FILENAME}_variants.bcf > $FOLDER/${FILENAME}_variants.vcf
 
-echo -e "SAMtools settings, pile-up genome: $PILEUP_OPTIONS" >> $LOG
-echo -e "SAMtools settings, call genome: $BCF_OPTIONS" >> $LOG
+echo -e "SAMtools1.7 settings, pile-up genome: $PILEUP_OPTIONS" >> $LOG
+echo -e "SAMtools1.7 settings, call genome: $BCF_OPTIONS" >> $LOG
 echo -e "Variant calling(genome) took" `time_since $START_TIME` "to do. \n" >> $LOG
 else
 echo $FOLDER/${FILENAME}_variants.vcf already exists, skipping.
@@ -999,17 +1013,19 @@ echo -e "\nsorting VCF file"
 die_unless $FOLDER/${FILENAME}_variants.bcf
 
 START_TIME=`date +%s`
-bcftools index $FOLDER/${FILENAME}_variants.bcf
+bcftools1.6 index $FOLDER/${FILENAME}_variants.bcf
 
 echo -e "Sorting VCF took" `time_since $START_TIME` "to make." >> $LOG
 else
 echo $FOLDER/${FILENAME}_variants_bcf.csi already exists, skipping.
 fi
-
+fi
 
 #######################################################################
 ###########################################
 ### GATK Variant Calling. 
+if [ $CALLING -eq 1 ]
+then
 current_file=$FOLDER/${FILENAME}_genome_variants_gatk.vcf
 if [ $SKIP -eq 0 ] || [ ! -f $(echo $current_file) ]
 then
@@ -1030,7 +1046,7 @@ echo -e "Variant calling (GATK) took" `time_since $START_TIME` "to make.\n" >> $
 else
 echo $current_file already exists, skipping.
 fi
-
+fi
 
       #############
 #########       ##########
@@ -1043,31 +1059,33 @@ fi
 #######################################################################
 ###########################################
 ### Make consensus sequence.
-
-if [ $SKIP -eq 0 ] || [ ! -f $(echo $FOLDER/${FILENAME}_consensus.fasta) ] || [ ! -d $(echo $FOLDER/scaffolds) ]
+infile="$FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam"
+ref_file="$PIPELINE/HtGenome.fasta"
+outfile="$FOLDER/${FILENAME}_consensus.fasta"
+if [ $SKIP -eq 0 ] || [ ! -f $(echo $outfile) ] || [ ! -d $(echo $FOLDER/scaffolds) ]
 then
 echo -e "\nmaking consensus sequence"
-die_unless $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam
-die_unless $PIPELINE/HtGenome.fasta
+die_unless $infile
+die_unless $ref_file
 
 START_TIME=`date +%s`
 mkdir_if_needed $FOLDER/scaffolds
-touch $FOLDER/${FILENAME}_consensus.fasta
+touch $outfile
 echo -e "starting...\n\n"
 
 #Get SAM files of exons from genome match
 
-cat $PIPELINE/HtGenome.fasta | grep -o "Ht[^\n]*" | \
+cat $ref_file | grep -o "Ht[^\n]*" | \
 while read line; do 
 name=`echo $line | sed "s/\s//"`
-if [ `samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name -c` -eq 0 ]; then
+if [ `samtools1.7 view $infile $name -c` -eq 0 ]; then
 #echo -en "\e[1A"; echo -e "\e[0K\rskipping $name"
 continue 
 fi
 #echo -en "\e[1A"; echo -e "\e[0K\rFinding reads from <${name}>";\
-scaffold_length=`cat $PIPELINE/HtGenome.fasta | grep $name -A1 | tail -n1 | tr -d "\n" | wc -c`
+scaffold_length=`cat $ref_file | grep $name -A1 | tail -n1 | tr -d "\n" | wc -c`
 {
-samtools mpileup -uf $PIPELINE/HtGenome.fasta $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam -r $name -d 100000 | bcftools call -c --ploidy 1 > $FOLDER/scaffolds/${name}_consensus.vcf;\
+samtools1.7 mpileup -uf $ref_file $infile -r $name -d 100000 | bcftools1.6 call -c --ploidy 1 > $FOLDER/scaffolds/${name}_consensus.vcf;\
 } > /dev/null 2> /dev/null #Silence this script, so it doesn't report every time it's run.
 #echo did $FOLDER/scaffolds/${name}_consensus.fastq; \
 scaffold_sequence=`cat $FOLDER/scaffolds/${name}_consensus.vcf | perl $PIPELINE/third_party_programs/vcfutils.pl vcf2fq | seqtk seq -A | tail -n1 | tr -d "\n"` 
@@ -1079,14 +1097,14 @@ if [ $length_difference -gt 0 ] ; then # samtools mpileup mislays the end of the
   scaffold_sequence=`echo "${scaffold_sequence}$extra_n"`
 fi
 echo -e ">$name\n$scaffold_sequence" > $FOLDER/scaffolds/${name}_consensus.fasta; \
-echo -e ">$name\n$scaffold_sequence" >> $FOLDER/${FILENAME}_consensus.fasta ; \
+echo -e ">$name\n$scaffold_sequence" >> $outfile; \
 echo -en "\e[1A"; echo "created $FOLDER/scaffolds/${name}_consensus.fasta" 
 done
 echo -en "\e[1A"; echo -e "\e[0K\rDone";\
 
 echo -e "Samtools pileup consensus file took" `time_since $START_TIME` "to make.\n" >> $LOG
 else
-echo $FOLDER/${FILENAME}_consensus.fasta already exists, skipping.
+echo $outfile already exists, skipping.
 fi
 
 
@@ -1107,11 +1125,16 @@ cat $PIPELINE/HtExons.fasta | grep -o "Ht[^\n]*" | while read line; do
 scaffold_name=`echo "$line" | grep -oP "Ht[^:]*"`
 [[ -f $( echo "$FOLDER/scaffolds/${scaffold_name}_consensus.fasta" ) ]] || continue #Skip if file doesn't exist
 interval=`echo "$line" | grep -oP "\d+-\d+"`
+orientation=`echo "$line" | grep -oP "\(.\)+"`
 #echo "$interval"
 IFS='-'; read start end <<< "$interval"
 length=$[end-start]
 scaffold_code=`cat "$FOLDER/scaffolds/${scaffold_name}_consensus.fasta" | grep -A1 "$scaffold_name" | grep -v "^>"`
 sequence=${scaffold_code:start:length} #cut out exon substring from scaffold
+if [ "$orientation" == "(-)" ] 
+then
+sequence=`rev_comp $sequence`
+fi
 #echo $scaffold_name
 #echo $sequence
 [[ $sequence =~ [ATGCatgc]+ ]] || continue  #Skip if sequence is just 'N' or '-'
@@ -1138,7 +1161,7 @@ touch $outfile
 echo "starting..."
 START_TIME=`date +%s`
 
-cat $ref_file | while read line gene length ; do name=`echo $line | grep -oP Ht[^\(]+`; echo -en "$name\t"; echo -en "$length\t"; samtools depth -aa -r "$name" $infile | awk -v l=$length '{if($3>2) mapped+=1; else unmapped+=1}END{if (mapped>0) print mapped/(l+1); else print 0}' ; done > $outfile
+cat $ref_file | while read line gene length ; do name=`echo $line | grep -oP Ht[^\(]+`; echo -en "$name\t"; echo -en "$length\t"; samtools1.7 depth -r "$name" $infile | awk -v l=$length '{if($3>2) mapped+=1; else unmapped+=1}END{if (mapped>0) print mapped/(l+1); else print 0}' ; done > $outfile
 
 echo -e "$outfile took" `time_since $START_TIME` "to make.\n" >> $LOG
 else
@@ -1173,7 +1196,7 @@ exon_name=`echo $name | tr -d ">" | cut -d "(" -f1`;
 echo -e "\e[1A" "Processing $exon_name                    ";
 
 #Ignore if no reads
-read_nr=`samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $exon_name | wc -l`
+read_nr=`samtools1.7 view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $exon_name | wc -l`
 if [[ $read_nr -eq 0 ]] ; then 
 echo -e "ERROR: No reads in $exon_name\n";
 exit 0
@@ -1183,10 +1206,13 @@ fi
 #grep $exon_name 
 
 #Note: Maximum readcount capped at 9 
-exon_read_counts=`samtools depth -aa "$FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam" -r "$exon_name" | cut -f3 | sed -e "s/[0-9]\{2,\}/9/g" | tr -d "\n" | tail -c +2`;  
+exon_read_counts=`samtools1.7 depth -aa "$FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam" -r "$exon_name" | cut -f3 | sed -e "s/[0-9]\{2,\}/9/g" | tr -d "\n" | tail -c +2`;  
 current_fasta="$FOLDER/cap_consensus/exons/$exon_name.fasta";
 touch "$current_fasta";
-
+if [[ "$name" == *"(-)"* ]] 
+then
+exon_read_counts=`echo "$exon_read_counts" | rev`
+fi
 cap_code=`mark_depth "$exon_code" "$exon_read_counts" | sed "s/n/-/g"` 
 if [[ $cap_code =~ [ATGCNatgcn-]+ ]] ; then
 echo -e "$name\n$cap_code" > $current_fasta;
@@ -1209,7 +1235,7 @@ fi
 if [ $SKIP -eq 0 ] || [ ! -d $(echo $FOLDER/consensus) ]
 then
 echo -e "making multifastas"
-die_unless $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam #THIS MAY FAIL
+die_unless $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam 
 die_unless $PIPELINE/cigar_parser.py
 START_TIME=`date +%s`
 mkdir_if_needed $FOLDER/multifastas
@@ -1217,7 +1243,7 @@ mkdir_if_needed $FOLDER/consensus
 mkdir_if_needed Consensus
 echo -e "" > $FILTER_OUT
 ADDRESS=`pwd`/$FOLDER 
-AVG_LEN=`samtools view -F 0x4 $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam | cut -f 10 | awk '{EXON_READ_NR+=1; TOTAL_LENGTH+=length($1)}END{print int(TOTAL_LENGTH/EXON_READ_NR+0.5) }'`
+AVG_LEN=`samtools1.7 view -F 0x4 $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam | cut -f 10 | awk '{EXON_READ_NR+=1; TOTAL_LENGTH+=length($1)}END{print int(TOTAL_LENGTH/EXON_READ_NR+0.5) }'`
 echo -n "" > ${FOLDER}/$FILTER_OUT
 echo -n "" > ${FOLDER}/cigar_parser.log
 reset_file $FOLDER/temp.txt
@@ -1243,12 +1269,12 @@ scaffold=`echo "$name" | sed "s/:.*//"`;
 #echo starting $FOLDER/$name
 #echo line = "$line"
 START=`date +%s.%3N`;
-nr_of_reads=`samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name_stripped | wc -l`;
+nr_of_reads=`samtools1.7 view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name_stripped | wc -l`;
 if [[ nr_of_reads -gt 1000 ]] ; then #If there are more than 1000 reads, subsample. 
 seq_len=`cat $PIPELINE/HtExons.fasta | grep $name_stripped -A1 | tail -n1 | tr -d "\n" | wc -c`;
 out=`subsample_bam $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name_stripped | sort -k4n | $PIPELINE/cigar_parser.py $PIPELINE/HtGenome.fasta $name --speedy`;
 else
-out=`samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name_stripped | return_unless_DNA_match "40" | $PIPELINE/cigar_parser.py $PIPELINE/HtGenome.fasta $name --speedy`;
+out=`samtools1.7 view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name_stripped | return_unless_DNA_match "40" | $PIPELINE/cigar_parser.py $PIPELINE/HtGenome.fasta $name --speedy`;
 fi;
 COUNTER=`cat "$FOLDER/temp.txt" | tr -d "\n" | wc -c`;
 if [ ${#out} -gt 10 ]; then
@@ -1260,7 +1286,7 @@ echo ">$name" >> $FOLDER/consensus/$name.fasta;
 echo "$out" | tail -n 6 | grep Cut_consensus -A1 | tail -n1 >> $FOLDER/consensus/$name.fasta;
 #echo "name=<$name>, sequence=<$sequence> "
 size_nr=`cat $FOLDER/multifastas/$name.fasta | wc -c`;
-line_nr=`samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name_stripped | wc -l`;
+line_nr=`samtools1.7 view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $name_stripped | wc -l`;
 echo -e "$COUNTER\t$NUMBER\t$name\t$line_nr\t$size_nr\t$time_nr" >> ${FOLDER}/cigar_parser.log;
 fi;
 echo -n "." >> "$FOLDER/temp.txt";
@@ -1292,7 +1318,7 @@ die_unless $FOLDER/${FILENAME}_consensus.fasta
 mkdir_if_needed Consensus
 mkdir_if_needed Consensus/cigar_parser
 cp $FOLDER/${FILENAME}_consensus.fasta Consensus/${FILENAME}_consensus.fasta
-cp $FOLDER/${FILENAME}_exon_consensus.fasta Consensus/${FILENAME}_exon_consensus.fasta
+cp $FOLDER/${FILENAME}_exon_consensus2.fasta Consensus/${FILENAME}_exon_consensus.fasta
 
 sample=$FOLDER
 cat $FOLDER/${FILENAME}_exon_consensus.fasta | paste - - | while read line ; do \
@@ -1471,50 +1497,85 @@ fi
 ######################################################
 ### Make length/identity statistics for each gene. 
 
-current_file=$FOLDER/${FILENAME}_gene_length_and_id.tsv
-if [ $SKIP -eq 0 ] || [ ! -f $(echo $current_file) ]
+outfile=$FOLDER/${FILENAME}_gene_length_and_id.tsv
+outfile2=Consensus/${FOLDER}_${FILENAME}_gene_length_and_id.tsv
+if [ $SKIP -eq 0 ] || [ ! -f $(echo $outfile) ]
 then
-echo -e "\ngenerating $current_file" 
+echo -e "\ngenerating $outfile" 
 START_TIME=`date +%s`
 die_unless $FOLDER/${FILENAME}_exon_consensus3.fasta
 reset_file $FOLDER/${FILENAME}_exon_length_and_id.tsv
+reset_file $FOLDER/${FILENAME}_exon_length_and_id_test.tsv
 echo "" > $FOLDER/temp4
 
+echo >&2 "Making Hash" 
+
 #Make Gene-vs-Exon hash 
-declare -A MOIN_REVISIONS exon_gene #Allow strings with parentheses etc to be keys.  
-while read exon gene length # $length not used, but having it gets rid of that column. 
+declare -A MOIN_REVISIONS exon_gene #Allow strings with parentheses etc to be keys.
+declare -A MOIN_REVISIONS exon_length  
+while read exon gene length 
 do
     exon_gene[$exon]=$gene
+    exon_length[$exon]=$length
 done < $PIPELINE/exon_to_gene.list
 
-#For each exon:
+echo >&2 "Looping over exons" 
+
+#For each exon with reads:
 cat $FOLDER/${FILENAME}_exon_consensus3.fasta | paste - - | tr -d ">" | while read name code ; 
 do 
-echo -e ">$name\n$code" > $FOLDER/temp
-cat $PIPELINE/exons/${name}.fasta > $FOLDER/temp2
+cat "$PIPELINE/exons/${name}.fasta" > $FOLDER/temp2
 coverage=`echo $code | tr -cd "AGCTagct" | wc -c`
-[ $coverage -eq 0 ] && continue #'Keeps script from dividing by zero if something goes wrong. 
 certain_coverage=`echo $code | tr -cd "AGCT" | wc -c`
+certain_code=`echo $code | tr -c "AGCT" "N"`
+echo -e ">$name\n$certain_code" > $FOLDER/temp
 {
 stretcher $FOLDER/temp2 $FOLDER/temp $FOLDER/temp3 #Needleman-Wunsch rapid global alignment of two sequences
 } > /dev/null 2> /dev/null #Silence this script, so it doesn't report every time it's run.
-identity=`cat $FOLDER/temp3 | grep "Identity" | grep -oP "\d.*"`
+alignment=`cat $FOLDER/temp3 | grep "Identity" | grep -oP "\d.*"`
 gene=${exon_gene[$name]}
+length=${exon_length[$name]}
 #echo -e "$name\t$gene\t$certain_coverage\t$matches\t$identity\t$percent%"
-matches=`echo "$identity" | cut -d '/' -f1` 
-percent=`bc <<< "scale=1; 100*$matches/$coverage"` 
-echo -e "$name\t$gene\t$coverage\t$matches\t$identity\t$percent%" >> $FOLDER/${FILENAME}_exon_length_and_id.tsv
-echo -e "$name\t$gene\t$certain_coverage\t$matches\t$identity\t$percent%" >> $FOLDER/${FILENAME}_exon_length_and_id_test.tsv
+matches=`echo "$alignment" | cut -d '/' -f1` 
+misses=`bc <<< "$certain_coverage - $matches"` 
+if [ $certain_coverage -eq 0 ] 
+then 
+  certain_identity=0
+else 
+  certain_identity=`bc <<< "scale=1; 100*$matches/$certain_coverage"` 	
+fi
+if [ $length -eq 0 ] 
+then 
+  percent_exon=0
+  coverage_percent=0
+else 
+  percent_exon=`bc <<< "scale=1; 100*$coverage/$length"` 	
+  coverage_percent=`bc <<< "scale=1; 100*$certain_coverage/$length"` 	
+fi
+ 
+echo -e "$name\t$gene\t$coverage\t$matches\t$alignment\t$percent_exon%" >> $FOLDER/${FILENAME}_exon_length_and_id.tsv
+echo -e "$name\t$gene\t$certain_coverage\t$matches\t$certain_identity\t$coverage_percent\t$alignment\t$misses" >> $FOLDER/${FILENAME}_exon_length_and_id_test.tsv
+
 cat $FOLDER/temp3 >> $FOLDER/temp4 
 done
 
-#Compile exon data into gene data 
-gawk '{a[$2]+=$3; b[$2]+=$4}END{for (i in a){c=100*b[i]/a[i]; printf "%s\t%s\t%3.1f\n", i, a[i], c;}}' $FOLDER/${FILENAME}_exon_length_and_id.tsv | sort -k1 > $current_file 
+echo >&2 "Compiling $outfile " 
 
-echo made $current_file 
-echo -e "$current_file took" `time_since $START_TIME` "to make.\n" >> $LOG
+#Compile exon data into gene data 
+gawk '{a[$2]+=$3; b[$2]+=$4}END{for (i in a){if(a[i]==0) c=0; else c=100*b[i]/a[i]; printf "%s\t%s\t%3.1f\n", i, a[i], c;}}' $FOLDER/${FILENAME}_exon_length_and_id.tsv | sort -k1 > $outfile 
+
+echo >&2 "Compiling $FOLDER/${FILENAME}_gene_length_and_id_test.tsv" 
+
+gawk '{a[$2]+=$3; b[$2]+=$4}END{for (i in a){if(a[i]==0) c=0; else c=100*b[i]/a[i]; printf "%s\t%s\t%3.1f\n", i, a[i], c;}}' $FOLDER/${FILENAME}_exon_length_and_id_test.tsv | sort -k1 > $FOLDER/${FILENAME}_gene_length_and_id_test.tsv
+
+cp $outfile $outfile2
+
+echo made $outfile 
+echo -e "$outfile took" `time_since $START_TIME` "to make.\n" >> $LOG
 else
-echo $current_file already exists, skipping. 
+echo $outfile already exists, skipping. 
+[[ ! -f $(echo $outfile2) ]] && cp $outfile $outfile2
+
 fi
 
 
@@ -1526,7 +1587,7 @@ infile=${FOLDER}/${FILENAME}_double_single_end_genome_sorted_rg.bam
 outfile=${FOLDER}/${FILENAME}_probe_stats.tsv
 outfile2=Consensus/${FOLDER}_${FILENAME}_probe_stats.tsv
 ref_file=$PIPELINE/Ht_probes.csv
-if [ $SKIP -eq 0 ] || [ ! -f $(echo $outfile) ] 
+if [ $SKIP -eq 0 ] || [ ! -f $(echo $outfile) ]
 then
 echo -e "generating $outfile."
 START_TIME=`date +%s`
@@ -1541,13 +1602,13 @@ do
 	GC=`echo $seq | tr -cd 'GC' | wc -c` ; 
 	gc_content=`bc <<< "scale=1; 100*$GC/$length"` ; 
 	echo -ne "$pos\t$gc_content\t" >> $outfile ; 
-	reads=`samtools view "$infile" "$pos" -c` ;
+	reads=`samtools1.7 view "$infile" "$pos" -c` ;
 	echo -ne "$reads\t" >> $outfile ;
 	if [ $reads -eq 0 ] 
 	then
 		echo "0" >> $outfile
 	else
-	samtools depth -aa "$infile" -r "$pos" | awk -v l=$length '{if($3>2) mapped+=1; else unmapped+=1}END{if (mapped>0) print (100*mapped/l); else print 0}' >> $outfile;
+	samtools1.7 depth "$infile" -r "$pos" | awk -v l=$length '{if($3>2) mapped+=1; else unmapped+=1}END{if (mapped>0) print (100*mapped/l); else print 0}' >> $outfile;
 	fi
 done
 cp $outfile $outfile2
@@ -1556,43 +1617,134 @@ echo made $outfile
 echo -e "$outfile took" `time_since $START_TIME` "to make.\n" >> $LOG
 else
 echo $outfile already exists, skipping. 
+[[ ! -f $(echo $outfile2) ]] && cp $outfile $outfile2
 fi
 
 #######################################################################
 ###############################################################
-### Compile length/identity statistics in consensus folder. 
-
-current_file=Consensus/${FOLDER}_${FILENAME}_gene_length_and_id.tsv
-if [ $SKIP -eq 0 ] || [ ! -f $(echo $current_file) ] 
+### Compile gene length/identity statistics in consensus folder. 
+infile=$PIPELINE/gc_content_sorted.tsv
+infile2=$FOLDER/${FILENAME}_gene_length_and_id_test.tsv
+outfile=Consensus/${FOLDER}_${FILENAME}_gene_length.tsv
+outfile2=Consensus/${FOLDER}_${FILENAME}_gene_identity.tsv
+outfile3=Consensus/${FOLDER}_${FILENAME}_gene_coverage.tsv
+if [ $SKIP -eq 0 ] || [ ! -f $(echo $outfile) ] 
 then
-echo -e "generating $current_file."
+
 START_TIME=`date +%s`
 die_unless $FOLDER/${FILENAME}_gene_length_and_id.tsv
+die_unless $FOLDER/${FILENAME}_gene_length_and_id_test.tsv
 
 lineage="" # Will be filled in by hand; researcher will know better than BLAST search, especially with novel strains not present in DB.
 
-#Add coverage column to coverage file in consensus folder
-echo -e "$lineage\n${FILENAME}_length" > Consensus/${FOLDER}_${FILENAME}_gene_coverage.tsv
-join -1 1 -2 1 -a1 -e'0' -o '2.2' $PIPELINE/gc_content_sorted.tsv $FOLDER/${FILENAME}_gene_length_and_id_test.tsv >> Consensus/${FOLDER}_${FILENAME}_gene_coverage.tsv
+echo -e "generating $outfile."
+#Add length column to length file in consensus folder
+echo -e "$lineage\n${FILENAME}_length" > $outfile
+join -1 1 -2 1 -a1 -e'0' -o '2.2' $PIPELINE/gc_content_sorted.tsv $FOLDER/${FILENAME}_gene_length_and_id_test.tsv >> $outfile
 
-#Add identity column to identity file in consensus folder
-echo -e "$lineage\n${FILENAME}_identity" > Consensus/${FOLDER}_${FILENAME}_gene_identity.tsv
-join -1 1 -2 1 -a1 -e'0' -o '2.3' $PIPELINE/gc_content_sorted.tsv $FOLDER/${FILENAME}_gene_length_and_id.tsv  >> Consensus/${FOLDER}_${FILENAME}_gene_identity.tsv
+echo -e "generating $outfile2."
+#Add identity column as identity file in consensus folder
+echo -e "$lineage\n${FILENAME}_identity" > $outfile2
+join -1 1 -2 1 -a1 -e'0' -o '2.3' $PIPELINE/gc_content_sorted.tsv $FOLDER/${FILENAME}_gene_length_and_id.tsv  >> $outfile2
 
-
-cp $FOLDER/${FILENAME}_gene_length_and_id.tsv Consensus/${FOLDER}_${FILENAME}_gene_length_and_id.tsv
-
-echo -e "$current_file took" `time_since $START_TIME` "to make.\n" >> $LOG
+echo -e "generating $outfile3."
+#Calculate coverage in percent and add file to consensus folder
+echo -e "$lineage\n${FILENAME}_coverage" > $outfile3
+join -1 1 -2 1 -a1 -e'0' -o '1.2,2.2' $PIPELINE/gc_content_sorted.tsv $FOLDER/${FILENAME}_gene_length_and_id_test.tsv | gawk '{cov=100*$2/$1; printf "%3.1f\n", cov;}' >> $outfile3
+echo -e "$outfile took" `time_since $START_TIME` "to make.\n" >> $LOG
 else
-echo $current_file already exists, skipping.
+
+echo $outfile, $outfile2 and $outfile3 already exist, skipping.
 fi
 
 #######################################################################
 ###############################################################
-### Make summary of gc_content. 
+### Make Consensus summary of gene stats. 
 
+outfile="Consensus/gene_length_and_id.tsv"
 #Join GC/length file, coverage file and identity file into one new file.  
-paste $PIPELINE/gc_content.tsv Consensus/*_gene_coverage.tsv Consensus/*_gene_identity.tsv > Consensus/gene_length_and_id.tsv
+paste $PIPELINE/gc_content.tsv Consensus/*_gene_length.tsv Consensus/*_gene_identity.tsv Consensus/*_gene_coverage.tsv > $outfile
+
+
+#######################################################################
+###############################################################
+### Compile exon length/identity statistics in consensus folder. 
+
+infile=$FOLDER/${FILENAME}_exon_length_and_id_test.tsv
+outfile=Consensus/${FOLDER}_${FILENAME}_exon_identity.tsv
+outfile2=Consensus/${FOLDER}_${FILENAME}_exon_coverage.tsv
+outfile3=Consensus/${FOLDER}_${FILENAME}_exon_alignment.tsv
+outfile4=Consensus/${FOLDER}_${FILENAME}_exon_mismatches.tsv
+if [ $SKIP -eq 0 ] || [ ! -f $(echo $outfile) ] || [ ! -f $(echo $outfile2) ] || [ ! -f $(echo $outfile3) ] || [ ! -f $(echo $outfile4) ] 
+then
+
+START_TIME=`date +%s`
+die_unless $infile
+die_unless $infile2
+
+lineage="" # Will be filled in by hand; researcher will know better than BLAST search, especially with novel strains not present in DB.
+
+echo -e "generating $outfile."
+#Add identity column to identity file in consensus folder
+echo -e "$lineage\n${FILENAME}_identity" > $outfile
+join -1 1 -2 1 -a1 -e'0' -o '2.5' -t $'\t' $PIPELINE/exons_gc_count_sorted.list $infile >> $outfile
+
+echo -e "generating $outfile2."
+#Add coverage column to coverage file in consensus folder
+echo -e "$lineage\n${FILENAME}_coverage" > $outfile2
+join -1 1 -2 1 -a1 -e'0' -o '2.6' -t $'\t' $PIPELINE/exons_gc_count_sorted.list $infile >> $outfile2
+
+echo -e "generating $outfile3."
+#Add alignment column to alignment file in consensus folder
+echo -e "$lineage\n${FILENAME}_alignment" > $outfile3
+join -1 1 -2 1 -a1 -e'0' -o '2.7' -t $'\t' $PIPELINE/exons_gc_count_sorted.list $infile >> $outfile3
+
+echo -e "generating $outfile4."
+#Add mismatches column to mismatches file in consensus folder
+echo -e "$lineage\n${FILENAME}_mismatches" > $outfile4
+join -1 1 -2 1 -a1 -e'0' -o '2.8' -t $'\t' $PIPELINE/exons_gc_count_sorted.list $infile >> $outfile4
+
+echo -e "$outfile took" `time_since $START_TIME` "to make.\n" >> $LOG
+else
+
+echo $outfile and $outfile2 already exists, skipping.
+fi
+
+###############################
+########################
+## Make exon GC file
+
+infile=$PIPELINE/HtExons.fasta
+outfile=Consensus/exon_gc_content.tsv
+outfile2=Consensus/exon_gc_content_labeled.tsv
+if [ $SKIP -eq 0 ] || [ ! -f $(echo $outfile) ] 
+then
+echo -e "generating $outfile."
+START_TIME=`date +%s`
+die_unless $infile
+reset_file $outfile
+
+cat $infile | paste - - | tr -d ">" | while read name seq ; do 
+  length=`echo $seq | tr -cd 'AGCT' | wc -c`;
+  GC=`echo $seq | tr -cd 'GC' | wc -c` ; 
+  gc_content=`bc <<< "scale=1; 100*$GC/$length"` 
+  echo -e "$name\t$length\t$gc_content" >> $outfile
+  done
+echo -e "\nexon\tlength\tgc%" > $outfile2
+cat $outfile >> $outfile2
+echo -e "$outfile took" `time_since $START_TIME` "to make.\n" >> $LOG
+else
+echo $outfile already exists, skipping.
+fi
+
+#######################################################################
+###############################################################
+### Make Consensus summary of exon stats. 
+
+#Join exon GC/length file, coverage file and identity file into one new file.  
+paste Consensus/exon_gc_content_labeled.tsv Consensus/*_exon_coverage.tsv Consensus/*_exon_identity.tsv > Consensus/exon_length_and_id.tsv
+
+
 
             ##############
 ######################################
@@ -1624,20 +1776,20 @@ cat ${FOLDER}/$FILTER_OUT | sort | tr "\t" "\n" | awk '!a[$0]++' > ${FOLDER}/rem
 READS_SINGLE=$[(`cat $FOLDER/${FILENAME}_trimmed_single_end_min36.fastq | wc -l`)/4 + (`cat $FOLDER/${FILENAME}_trimmed_single_end_reverse_min36.fastq | wc -l`)/4]
 TIME_READS=`date +%s`
 echo -e "Time: " $[`date +%s` - START_TIME] ": Reads counted."
-MAPPED_READS_GENOME=`samtools view -F 0x4 $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam | cut -f 1 | sort | uniq | wc -l `
+MAPPED_READS_GENOME=`samtools1.7 view -F 0x4 $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam | cut -f 1 | sort | uniq | wc -l `
 TIME_MAPPED=`date +%s`
 echo -e "Time: " $[`date +%s` - START_TIME] ": Mappings counted."
 
-read EXONS_HIT <<< $(for line in `cat $PIPELINE/HtExons.fasta | grep -o "Ht[^\(]*"`; do samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $line | wc -l; done | awk '{if($0>0) nr+=1}END{print nr}')
-read EXONS_HIT_TEN <<< $(for line in `cat $PIPELINE/HtExons.fasta | grep -o "Ht[^\(]*"`; do samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $line | wc -l; done | awk '{if($0>9) nr+=1}END{print nr}')
-read EXONS_HIT_HUNDRED <<< $(for line in `cat $PIPELINE/HtExons.fasta | grep -o "Ht[^\(]*"`; do samtools view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $line | wc -l; done | awk '{if($0>99) nr+=1}END{print nr}')
+read EXONS_HIT <<< $(for line in `cat $PIPELINE/HtExons.fasta | grep -o "Ht[^\(]*"`; do samtools1.7 view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $line | wc -l; done | awk '{if($0>0) nr+=1}END{print nr}')
+read EXONS_HIT_TEN <<< $(for line in `cat $PIPELINE/HtExons.fasta | grep -o "Ht[^\(]*"`; do samtools1.7 view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $line | wc -l; done | awk '{if($0>9) nr+=1}END{print nr}')
+read EXONS_HIT_HUNDRED <<< $(for line in `cat $PIPELINE/HtExons.fasta | grep -o "Ht[^\(]*"`; do samtools1.7 view $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam $line | wc -l; done | awk '{if($0>99) nr+=1}END{print nr}')
 
 echo -e "Time: " $[`date +%s` - START_TIME] ": Exon hits counted."
 
 GENOME_BASES_HIT=0
 GENOME_BASES_MISSED=0
 
-read GENOME_BASES_HIT GENOME_BASES_MISSED <<< $(samtools depth -aa $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam | awk '{if($3>2) total+=1; else unmapped+=1}END{print total" "unmapped}')
+read GENOME_BASES_HIT GENOME_BASES_MISSED <<< $(samtools1.7 depth -aa $FOLDER/${FILENAME}_double_single_end_genome_sorted_rg.bam | awk '{if($3>2) total+=1; else unmapped+=1}END{print total" "unmapped}')
 
 END_TIME=`date +%s`
 echo -e "Time: " $[`date +%s` - START_TIME] ": Base hits counted."
@@ -1707,7 +1859,7 @@ START_TIME=`date +%s`
 cat $FOLDER/${FILENAME}_probe_stats.tsv | cut -f1,2 > Consensus/probes_stats.tsv
 ls Consensus/*probe_stats.tsv | while read line ; 
 do 
-  paste Consensus/probes_stats.tsv <( cat $line | cut -f3 ) > temp ; 
+  paste Consensus/probes_stats.tsv <( cat $line | cut -f4 ) > temp ; 
   cat temp > Consensus/probes_stats.tsv ; 
 done
 
