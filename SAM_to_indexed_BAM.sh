@@ -1,10 +1,11 @@
 #!/bin/bash
 MINARGS=1
 
-INFILE=$1
-OUTFILE=$2
-FASTQ_FILE=$3
-SAMPLE_NAME=$4
+INFILE=$1         #Name of infile
+OUTFILE=$2        #Name of outfile
+FASTQ_FILE=$3     #FASTQ file to take information from
+SAMPLE_NAME=$4    #Sample name to take information from
+ADD_HEADER=${5-0} #SAM file to steal headers from, assuming you want headers. 
 VERBOSE=1
 
 [[ $VERBOSE -eq 1 ]] && echo "starting SAM_to_indexed_BAM.sh"
@@ -25,6 +26,13 @@ function die_unless ()
 #    echo -e >&2 "Checked that file '$1' exists"
   fi 
 }
+function add_header()
+{
+    sam_file=$1
+    donator_file=$2
+    samtools view -H $donator_file
+    cat $sam_file 
+}
 
 function add_read_group ()
 {
@@ -34,7 +42,7 @@ outfile=`echo $current_file | sed 's/.bam/_rg.bam/'`
 file_name=$2
 fastq_file=${3-"${file_name}_R1_001.fastq"}
 
-[[ $VERBOSE -eq 1 ]] && echo -e "current_file=$current_file\n outfile=$outfile\n file_name=$filename\n fastq_file=$fastq_file"
+[[ $VERBOSE -eq 1 ]] && echo -e "current_file=$current_file\n outfile=$outfile\n file_name=$file_name\n fastq_file=$fastq_file"
 
 #Sample ID
 SAMPLE_NAME=`echo "$file_name}" | cut -d "_" -f 1` 
@@ -57,6 +65,12 @@ PLATFORM="ILLUMINA"
 LIBRARY="LIB1"
 
 RG_OPTIONS="RGID=${MACHINE_NAME}.LANE${LANE}.${SEQ_NUMBER} RGLB=${LIBRARY} RGPL=${PLATFORM} RGPU=${MACHINE_NAME}.LANE${LANE}.${SAMPLE_NAME} SM=${SAMPLE_NAME}"
+
+[[ $VERBOSE -eq 1 ]] && echo -e "\nStarting picard.jar AddOrReplaceReadGroups \n
+I=${current_file} \n
+O=$OUTFILE \n
+$RG_OPTIONS"
+
 {
 java -jar $PIPELINE/third_party_programs/picard/build/libs/picard.jar AddOrReplaceReadGroups \
 I=${current_file} \
@@ -76,14 +90,23 @@ if ([ ! -f $(echo $OUTFILE) ] )
 then
 [[ $VERBOSE -eq 1 ]] && echo -e "\nconverting genome match to BAM, double single end, $current_file"
 die_unless $INFILE
-
+[[ $VERBOSE -eq 1 ]] && echo -e "\nCreating BAM file '$TEMP_NAME.bam' from infile '$INFILE'"
+if [[ ! $ADD_HEADER =~ ^0$ ]] && [ -f $(echo $ADD_HEADER) ] 
+then
+    [[ $VERBOSE -eq 1 ]] && echo -e "\nadding headers from '$ADD_HEADERS'..."
+    add_header $INFILE $ADD_HEADER > ${INFILE}.tmp
+else 
+    cp $INFILE ${INFILE}.tmp
+fi
 samtools view -S -b \
 -o "$TEMP_NAME.bam" \
-"$INFILE"
+"${INFILE}.tmp"
+#rm ${INFILE}.tmp
 
-samtools sort "$TEMP_NAME.bam" \
--f ${TEMP_NAME}_sorted.bam 
-
+[[ $VERBOSE -eq 1 ]] && echo -e "\nSorting BAM file '$TEMP_NAME.bam'"
+#Previous command doesn't work anymore. 
+#samtools sort "$TEMP_NAME.bam" -o "${TEMP_NAME}_sorted.bam"
+samtools sort "$TEMP_NAME.bam" "${TEMP_NAME}_sorted"
 rm $TEMP_NAME.bam
 
 samtools index ${TEMP_NAME}_sorted.bam
