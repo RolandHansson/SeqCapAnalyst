@@ -51,11 +51,14 @@ BASE_FILES="$PIPELINE/base_files"
 FOLDER=""
 FILENAME=""
 
-#Shortcuts to files
-samtools="$PIPELINE/third_party_programs/samtools-1.7/samtools"
-bcftools="$PIPELINE/third_party_programs/bcftools-1.6/bcftools"
+#Shortcuts to files, in case you want to run with a specific version. 
+#samtools="$PIPELINE/third_party_programs/samtools-1.7/samtools" 
+samtools="samtools"
+#bcftools="$PIPELINE/third_party_programs/bcftools-1.6/bcftools"
+bcftools="bcftools"
 trimmomatic="$PIPELINE/third_party_programs/Trimmomatic-0.36/trimmomatic-0.36.jar"
-
+#picard="$PIPELINE/third_party_programs/picard/build/libs/picard.jar"
+picard="picard"
 
 # References to files with variable names
 ADAPTER="$PIPELINE/adapters/TruSeq3-PE-2.fa"
@@ -811,7 +814,7 @@ then
 echo -e "\nMaking dictionary from $infile"
 [[ -f $(echo $outfile) ]] && rm $outfile
 
-java -jar $PIPELINE/third_party_programs/picard/build/libs/picard.jar CreateSequenceDictionary R=$infile O=$outfile
+java -jar $picard CreateSequenceDictionary R=$infile O=$outfile
 
 else
 echo $outfile already exists, skipping.
@@ -826,7 +829,7 @@ then
 echo -e "\nMaking dictionary from $infile"
 [[ -f $(echo $outfile) ]] && rm $outfile
 
-java -jar $PIPELINE/third_party_programs/picard/build/libs/picard.jar CreateSequenceDictionary R=$infile O=$outfile
+java -jar $picard CreateSequenceDictionary R=$infile O=$outfile
 
 else
 echo $outfile already exists, skipping.
