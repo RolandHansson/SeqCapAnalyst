@@ -20,9 +20,13 @@ seqtk
 Mafft
 Stretcher (part of EMBOSS package)
 
-Trimmomatic (included)
-Picard (included)
-vcfutils.pl (included)
+INCLUDED: 
+ Trimmomatic (included)
+ Picard (included)
+ vcfutils.pl (included)
+ Trimmomatic (calls "java -jar ~/bin/trimmomatic-0.36.jar")
+ SAMtools (calls on "samtools1.7")
+ bcftools (calls on "bcftools1.6") 
 ---------------------------
 
 INSTALLATION
@@ -31,9 +35,30 @@ Make sure prerequisites (above) are installed.
 
 put SeqCapAnalyst folder in your bin folder, and change directory to bin folder. 
 
-chmod 755 SeqCapAnalyst/SeqCapAnalyst.sh #Add permissions
-ln -s SeqCapAnalyst/SeqCapAnalyst.sh #Add to callable programs
-bash SeqCapAnalyst/check_dependencies.sh #double-check prerequisites
+    chmod 755 SeqCapAnalyst/SeqCapAnalyst.sh #Add permissions
+    ln -s SeqCapAnalyst/SeqCapAnalyst.sh . #Add to callable programs
+    bash SeqCapAnalyst/check_dependencies.sh #double-check prerequisites
+
+The base_files folder should contain the following: 
+.fasta file, containing contigs of the reference genome 
+.gff file, containing exon name, exon position in reference genome and
+corresponding gene ID. (If an exon is missing a gene ID, a custom one will be
+added for that particular exon.)
+.csv file, containing probe name, probe sequence in reference genome and probe
+position. 
+*The contigs/chromosomes need to have consistent names in all three files;
+they will be cross-referenced.
+*File names are unimportant; the program recognizes file endings. 
+
+In the fastq_screen_fastas folder, add those fastas against which you want to
+screen for contamination. (The reference genome from base_files folder will
+automatically be added. )
+
+Other necessary files will be automatically generated from these and put into
+the "intermediates" folder. Automatic generation of intermediates will be triggered if those
+files are missing, or if the command line option "-i 0" is provided. 
+
+This program was developed and tested in OpenSuse.
 
 ---------------------------
 
@@ -44,7 +69,9 @@ Example: SeqCapAnalyst.sh 512022_S1_L001_R1_001.fastq
 
 NOTE: SeqCapAnalyst is intended for use on Illumina files, 
 and thus expects two input files ending in "_R1_001.fastq" and "_R2_001.fastq".
-(Only one input file needs to be named; the name of the other will be extrapolated from the first.)
+(Only one input file needs to be named; the name of the other will be
+extrapolated from the first.)
+Note: fastq.gz and fastq.bz2 input files are supported.  
 
 ---------------------------
 
@@ -123,6 +150,8 @@ scaffolds/
 
 CONSENSUS: 
 
+NOTE: Filenames with a ':' in them will not work in Windows
+environments. Consider changing ':' into '.' to retain compatibility. 
 
 ---------------------------
 
